@@ -1,0 +1,35 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.matplotlib/
+*.egg-info/
+build/
+dist/
+/results/
+
+# Local secrets and harness state
+.env
+.env.*
+*.credentials.yaml
+.dsh/
+/vasp/dsh_review/
+/dsh-local/
+
+# Keep machine-generated or licensed material outside the tracked repository.
+/vasp/mnf2/runs/
+/vasp/mnf2/results-*/scf/
+/vasp/mnf2/results-*/probe/
+/vasp/mnf2/results-*/run.txt
+/vasp/mnf2/results-*/paw.txt
+POTCAR*
+WAVECAR*
+CHGCAR*
+CHG
+OUTCAR*
+OSZICAR*
+PROCAR*
+EIGENVAL*
+vasprun.xml
+vaspout.h5
+*.log

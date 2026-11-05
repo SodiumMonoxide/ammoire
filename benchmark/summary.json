@@ -1,0 +1,30 @@
+{
+  "angle_deg": 4.0,
+  "shells": 2,
+  "bias": 0.05,
+  "coupling": 0.08,
+  "opposite_charge_scale": 0.7,
+  "Same-Q tunneling": {
+    "max_commutator_frobenius": 0.0,
+    "mean_central_weighted_Q_variance": 5.111205100042122e-16,
+    "max_relative_G0_spectral_L1_change": 0.0009269727781209358
+  },
+  "With opposite-Q tunneling": {
+    "max_commutator_frobenius": 0.8041522005192798,
+    "mean_central_weighted_Q_variance": 0.46785237684669073,
+    "max_relative_G0_spectral_L1_change": 0.002908457101269662
+  },
+  "cutoff_comparison": {
+    "finer_shells": 3,
+    "gaussian_sigma": 0.04,
+    "vertices": [
+      "\u0393",
+      "X",
+      "M"
+    ]
+  },
+  "plane_waves": 13,
+  "bands": 78,
+  "k_points": 73,
+  "ham_offset": 1.17
+}

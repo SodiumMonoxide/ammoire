@@ -1,0 +1,20 @@
+MnF2 no-SOC dxy spin nodes, mirror spin swap, and inversion probes
+17
+Reciprocal
+ 0.000  0.000  0.000  1 ! Gamma
+ 0.250  0.000  0.000  1 ! Gamma-X node
+-0.250  0.000  0.000  1 ! Mirror of Gamma-X node
+ 0.000  0.250  0.000  1 ! Gamma-Y node
+ 0.100  0.100  0.000  1 ! Gamma-M small q
+ 0.150  0.150  0.000  1 ! Gamma-M small q
+ 0.200  0.200  0.000  1 ! Gamma-M
+ 0.250  0.250  0.000  1 ! Gamma-M midpoint
+-0.250  0.250  0.000  1 ! Mirror x
+ 0.250 -0.250  0.000  1 ! Mirror y
+-0.250 -0.250  0.000  1 ! Inversion partner
+ 0.300  0.150  0.125  1 ! Generic k
+-0.300  0.150  0.125  1 ! Generic mirror x
+-0.300 -0.150 -0.125  1 ! Generic inversion partner
+ 0.000  0.000  0.500  1 ! Z
+ 0.250  0.000  0.500  1 ! Z-R node
+ 0.250  0.250  0.500  1 ! Z-A midpoint

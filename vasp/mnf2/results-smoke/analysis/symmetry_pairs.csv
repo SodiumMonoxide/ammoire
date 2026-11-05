@@ -1,0 +1,21 @@
+operation,k1_index,k2_index,k1_label,k2_label,max_residual_eV
+mirror_x_spin_swap,1,1,Gamma,Gamma,2.0000000020559128e-06
+mirror_x_spin_swap,2,3,Gamma-X node,Mirror of Gamma-X node,2.0000000020559128e-06
+mirror_x_spin_swap,4,4,Gamma-Y node,Gamma-Y node,2.0000000020559128e-06
+mirror_x_spin_swap,8,9,Gamma-M midpoint,Mirror x,2.9999999999752447e-06
+mirror_x_spin_swap,10,11,Mirror y,Inversion partner,2.9999999999752447e-06
+mirror_x_spin_swap,12,13,Generic k,Generic mirror x,2.0000000020559128e-06
+mirror_x_spin_swap,15,15,Z,Z,2.0000000020559128e-06
+mirror_y_spin_swap,1,1,Gamma,Gamma,2.0000000020559128e-06
+mirror_y_spin_swap,2,2,Gamma-X node,Gamma-X node,2.0000000020559128e-06
+mirror_y_spin_swap,3,3,Mirror of Gamma-X node,Mirror of Gamma-X node,2.0000000020559128e-06
+mirror_y_spin_swap,8,10,Gamma-M midpoint,Mirror y,2.9999999999752447e-06
+mirror_y_spin_swap,9,11,Mirror x,Inversion partner,2.9999999999752447e-06
+mirror_y_spin_swap,15,15,Z,Z,2.0000000020559128e-06
+mirror_y_spin_swap,16,16,Z-R node,Z-R node,3.000000000086267e-06
+inversion_same_spin,1,1,Gamma,Gamma,0.0
+inversion_same_spin,2,3,Gamma-X node,Mirror of Gamma-X node,0.0
+inversion_same_spin,8,11,Gamma-M midpoint,Inversion partner,0.0
+inversion_same_spin,9,10,Mirror x,Mirror y,0.0
+inversion_same_spin,12,14,Generic k,Generic inversion partner,0.0
+inversion_same_spin,15,15,Z,Z,0.0

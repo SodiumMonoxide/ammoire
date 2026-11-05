@@ -1,0 +1,92 @@
+{
+  "scf": {
+    "ediff_reached": true,
+    "ediff_eV": 1e-07,
+    "final_free_energy_eV": -37.51740327,
+    "Mn_MuB": [
+      4.695,
+      -4.695
+    ],
+    "F_MuB": [
+      -0.016,
+      -0.016,
+      0.016,
+      0.016
+    ],
+    "net_cell_MuB_oszicar": -0.0,
+    "gamma_mesh": [
+      3,
+      3,
+      4
+    ]
+  },
+  "fixed_density_probe": {
+    "ediff_reached": true,
+    "ediff_eV": 1e-07,
+    "final_free_energy_eV": -36.36731551
+  },
+  "n_kpoints": 17,
+  "occupied_bands_per_spin": 27,
+  "sampled_occupied_unoccupied_gap_eV": 3.8679440000000005,
+  "nodal_k_count": 6,
+  "max_abs_occupied_splitting_at_nodal_k_eV": 3.000000000086267e-06,
+  "largest_occupied_splitting": {
+    "eV_signed": -0.6555089999999999,
+    "k_index": 7,
+    "label": "Gamma-M",
+    "occupied_energy_rank": 15
+  },
+  "occupied_spectrum_symmetry": {
+    "mirror_x_spin_swap": {
+      "n_pairs": 7,
+      "max_abs_residual_eV": 2.9999999999752447e-06
+    },
+    "mirror_y_spin_swap": {
+      "n_pairs": 7,
+      "max_abs_residual_eV": 3.000000000086267e-06
+    },
+    "inversion_same_spin": {
+      "n_pairs": 6,
+      "max_abs_residual_eV": 0.0
+    }
+  },
+  "fixed_index_tb_comparison": {
+    "tb_model": "roig-mnf2",
+    "tb_parameters": {
+      "a": 4.873,
+      "mu": -0.01,
+      "j": 0.05,
+      "t1": 0.0,
+      "t2": 0.13,
+      "t3": 0.0,
+      "t4": -0.02,
+      "t5": 0.015,
+      "t6": 0.0,
+      "t7": 0.03,
+      "t8": 0.33,
+      "soc": 0.0,
+      "soc_z": 0.0,
+      "c": 3.311
+    },
+    "tb_neel": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "tb_branch": "lower",
+    "tb_eV_per_model_unit": 1.0,
+    "vasp_band_up": 27,
+    "vasp_band_down": 27,
+    "k_points": 17,
+    "node_tolerance_eV": 1e-05,
+    "tb_near_zero_count": 6,
+    "max_abs_vasp_splitting_at_tb_near_zero_eV": 1.000000000139778e-06,
+    "unweighted_splitting_rmse_eV": 0.05138769144706166,
+    "max_abs_splitting_residual_eV": 0.20381600000000005,
+    "description": "Fixed VASP index and one TB branch for illustration. Mn d projections alone do not identify a unique orbital-matched branch across k.",
+    "min_max_Mn_d_projection_sum": [
+      0.584,
+      0.6829999999999999
+    ]
+  }
+}
