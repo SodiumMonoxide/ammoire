@@ -1,0 +1,441 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-07",
+  "timezone": "Asia/Shanghai",
+  "selection_scope": "14 primary research papers: electronic altermagnetism/twist/moiré intersections, magnetic texture controls, bosonic and peripheral method comparisons.",
+  "history_scope": [
+    "Original daily TB literature index (local history, through 2026-11-03)",
+    "Continuation daily TB index (117 entries, through 2026-11-07)",
+    "literature_core.md",
+    "history_and_moire.md",
+    "Prior NiCl2 angle-study manuscript and supplement (2026-11-06)"
+  ],
+  "dedup_method": "Case-folded DOI/arXiv aliases plus normalized full/partial titles and explicit search of repo literature docs. New means absent from these checked records only, not a guarantee the user never saw it. Duplicate source versions are merged into a paper record. Sheng is already documented in repo even though not matched in daily index.",
+  "new_relative_to_checked_records": [
+    "ding_cro_2026",
+    "mu_spinmoire_2026"
+  ],
+  "metadata_corrections": [
+    {
+      "target": "history_and_moire.md",
+      "old": "Jin 等，PRB 110, 174410",
+      "correct": "Sike Zeng and Yu-Jun Zhao",
+      "evidence": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.110.174410"
+    },
+    {
+      "target": "history_and_moire.md",
+      "old": "Järvinen 等，Nano Lett. 26, 5078",
+      "correct": "Qirui Cui et al.",
+      "evidence": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13107460/"
+    },
+    {
+      "target": "history_and_moire.md",
+      "old": "González-Hernández 等，Nano Lett. 6c01391 (as lead author shorthand)",
+      "correct": "Alberto M. Ruiz et al.; authors Ruiz, Shumilin, González-Hernández, Baldoví",
+      "evidence": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13352942/"
+    },
+    {
+      "target": "Guo citation",
+      "old": "Guo, Liu, Liu used without source-version distinction",
+      "correct": "Journal authors: San-Dong Guo, Yichen Liu, Junxi Yu, Cheng-Cheng Liu; arXiv v1 has three authors and is the model formula source",
+      "evidence": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.110.L220402"
+    }
+  ],
+  "papers": [
+    {
+      "id": "li_cairo_2025",
+      "priority": "A",
+      "title": "Altermagnetism and strain induced altermagnetic transition in Cairo pentagonal monolayer",
+      "authors": [
+        "Shuyi Li",
+        "Yu Zhang",
+        "Adrian Bahri",
+        "Xiaoliang Zhang",
+        "Chunjing Jia"
+      ],
+      "year": 2025,
+      "doi": "10.1038/s41535-025-00793-0",
+      "arxiv": "2412.16857",
+      "publication_status": "published",
+      "journal": "npj Quantum Materials 10, 83 (2025)",
+      "publication_date": "2025-07-25",
+      "sources": [
+        "https://www.nature.com/articles/s41535-025-00793-0",
+        "https://arxiv.org/html/2412.16857v1"
+      ],
+      "read_depth": "journal metadata/abstract; arXiv supplement S5-S7 inspected",
+      "history": "existing_daily_implemented_2026-11-07",
+      "summary_zh": "Cairo 六位点模型保留两磁性、四非磁性位点；对角应变改变 g/d 波节点。可将当日日报模型整理为独立预设，并校验未应变节点及应变后的低阶分量。",
+      "implementation_scope": "单层电子 TB；可作为扭转前的微观输入，论文自身并非 moiré 超胞。",
+      "equations": "arXiv v1 supplement S5-S7"
+    },
+    {
+      "id": "liu_twist_2024",
+      "priority": "A",
+      "title": "Twisted Magnetic Van der Waals Bilayers: An Ideal Platform for Altermagnetism",
+      "authors": [
+        "Yichen Liu",
+        "Junxi Yu",
+        "Cheng-Cheng Liu"
+      ],
+      "year": 2024,
+      "doi": "10.1103/PhysRevLett.133.206702",
+      "arxiv": "2404.17146",
+      "publication_status": "published",
+      "journal": "Physical Review Letters 133, 206702 (2024)",
+      "publication_date": "2024-11-15",
+      "sources": [
+        "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.133.206702",
+        "https://arxiv.org/html/2404.17146v1"
+      ],
+      "read_depth": "journal metadata/abstract; arXiv model Eqs.1-3 and geometry read",
+      "history": "existing_candidate_2026-11-04_and_repo_documented",
+      "summary_zh": "通过翻层和相反转角保持交换反向磁层的面内二重旋转；单层对称性约束 d/g/i 波类型。适合作为公度几何和对称性检查的物理来源。",
+      "implementation_scope": "公度格点几何必须另行构造并验证；通用整数超胞工具不等同复现文中 Slater–Koster 跃迁或 VOBr DFT。",
+      "equations": "arXiv v1 Eqs.1-3"
+    },
+    {
+      "id": "zeng_stacking_2024",
+      "priority": "A",
+      "title": "Bilayer stacking A-type altermagnet: A general approach to generating two-dimensional altermagnetism",
+      "authors": [
+        "Sike Zeng",
+        "Yu-Jun Zhao"
+      ],
+      "year": 2024,
+      "doi": "10.1103/PhysRevB.110.174410",
+      "arxiv": "2407.15097",
+      "publication_status": "published",
+      "journal": "Physical Review B 110, 174410 (2024)",
+      "publication_date": "2024-11-06",
+      "sources": [
+        "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.110.174410",
+        "https://arxiv.org/abs/2407.15097"
+      ],
+      "read_depth": "journal/arXiv metadata and abstract",
+      "history": "existing_candidate_2026-11-04_and_repo_documented",
+      "summary_zh": "对 A 型双层交错磁给出层群堆叠分类和可交换两层的操作。公度与交错磁是两个独立条件，生成超胞之后仍要核对磁序和层间对称性。",
+      "implementation_scope": "理论分类指导几何约束；未提取该文完整材料跃迁参数。",
+      "equations": null
+    },
+    {
+      "id": "guo_valley_2024",
+      "priority": "A",
+      "title": "Valley polarization in twisted altermagnetism",
+      "authors": [
+        "San-Dong Guo",
+        "Yichen Liu",
+        "Junxi Yu",
+        "Cheng-Cheng Liu"
+      ],
+      "authors_arxiv_v1": [
+        "San-Dong Guo",
+        "Yichen Liu",
+        "Cheng-Cheng Liu"
+      ],
+      "year": 2024,
+      "doi": "10.1103/PhysRevB.110.L220402",
+      "arxiv": "2406.13950",
+      "publication_status": "published",
+      "journal": "Physical Review B 110, L220402 (2024)",
+      "publication_date": "2024-12-06",
+      "sources": [
+        "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.110.L220402",
+        "https://arxiv.org/html/2406.13950v1"
+      ],
+      "read_depth": "journal metadata/abstract; arXiv Eqs.1-4 read",
+      "history": "existing_daily_implemented_2026-11-04_and_repo_adapter",
+      "summary_zh": "层偏压使不同层的相反自旋谷错开，原文给出可忽略层间耦合的极限。已有日报实现应保留来源和近似标签，避免重新计作新模型。",
+      "implementation_scope": "T=0 解耦四带基准；任意转角的旋转色散不能自动解释为完整 moiré 折叠和散射。",
+      "equations": "arXiv v1 Eqs.1-4"
+    },
+    {
+      "id": "liu_mnse_2026",
+      "priority": "B",
+      "title": "Sublayer-resolved altermagnetism in twisted antiferromagnetic bilayers with spin-layer coupling",
+      "authors": [
+        "Kehan Liu",
+        "Zhihua Zhang",
+        "Yueheng Du",
+        "Haotian Sun",
+        "Mimi Dong",
+        "Mingwen Zhao"
+      ],
+      "year": 2026,
+      "doi": "10.1103/ln1f-9x8r",
+      "arxiv": null,
+      "publication_status": "published",
+      "journal": "Physical Review B 113, 235429 (2026)",
+      "publication_date": "2026-06-22",
+      "sources": [
+        "https://journals.aps.org/prb/abstract/10.1103/ln1f-9x8r"
+      ],
+      "read_depth": "journal metadata and abstract; full model not obtained",
+      "history": "existing_abbreviated_title_candidate_2026-11-04",
+      "summary_zh": "MnSe 双层的六角翘曲色散与亚层相关 moiré 势共同产生 i 波劈裂；AA 与 AAᴿ 堆叠的对称机制不同。适合后续亚层投影和势相位约束基准。",
+      "implementation_scope": "需先获取全文/补充中的系数与规范；本次不将摘要所述连续模型当成已复现。",
+      "equations": null
+    },
+    {
+      "id": "sheng_ferro_2025",
+      "priority": "B",
+      "title": "Ubiquitous van der Waals altermagnetism with sliding/moire ferroelectricity",
+      "authors": [
+        "Yuxuan Sheng",
+        "Junwei Liu",
+        "Jia Zhang",
+        "Menghao Wu"
+      ],
+      "authors_source": "arXiv v1 author order; journal author order not independently checked",
+      "year": 2025,
+      "doi": "10.1007/s11433-025-2698-5",
+      "arxiv": "2411.17493",
+      "publication_status": "published_related_doi_confirmed_by_arxiv",
+      "journal": "Science China Physics, Mechanics & Astronomy 68, 297511 (2025)",
+      "publication_date": null,
+      "sources": [
+        "https://arxiv.org/abs/2411.17493",
+        "https://doi.org/10.1007/s11433-025-2698-5"
+      ],
+      "read_depth": "arXiv metadata/abstract; journal DOI supplied by arXiv; journal fetch unavailable",
+      "history": "existing_repo_documented_not_found_in_117_entry_daily_index",
+      "summary_zh": "滑移或扭转堆叠将铁电极化和自旋劈裂联系起来，可为层势与交换调制选题提供依据。应区分作者所称 pseudo-altermagnetism 与由旋转对称性补偿的交错磁。",
+      "implementation_scope": "材料设计参照；尚无本次提取的完整电子跃迁参数。",
+      "equations": null
+    },
+    {
+      "id": "shi_nonmagnetic_2026",
+      "priority": "B",
+      "title": "Moiré-induced altermagnetism from nonmagnetic constituents",
+      "authors": [
+        "Jingtian Shi",
+        "Maxim Khodas",
+        "Ivar Martin"
+      ],
+      "year": 2026,
+      "doi": null,
+      "arxiv": "2609.03271",
+      "arxiv_version": "v2",
+      "publication_status": "preprint_no_journal_reference_found",
+      "journal": null,
+      "publication_date": "2026-09-03",
+      "last_revision": "2026-09-12",
+      "sources": [
+        "https://arxiv.org/abs/2609.03271",
+        "https://arxiv.org/html/2609.03271v2"
+      ],
+      "read_depth": "abstract, mechanism/model and End Matter S6-S11 inspected",
+      "history": "existing_candidate_2026-11-04",
+      "summary_zh": "非磁方格层经结构弛豫、交替畴壁旋涡及电子相互作用产生 d/g 波。它要求弹性弛豫与自洽 Hartree–Fock，不能用预先指定的交换场代表自发磁序形成。",
+      "implementation_scope": "研究路线；当前固定哈密顿量工具不覆盖完整自洽形成机制。",
+      "equations": "arXiv v2 End Matter S6-S11"
+    },
+    {
+      "id": "chen_experiment_2026",
+      "priority": "B",
+      "title": "Altermagnetism in twisted van der Waals homostructures",
+      "authors": [
+        "Junying Chen",
+        "Xing Xie",
+        "Shaofei Li",
+        "Siyu Zhang",
+        "Shikun Hou",
+        "Xian Zhang",
+        "Jun He",
+        "Zongwen Liu",
+        "Jian-Tao Wang",
+        "Yanping Liu"
+      ],
+      "year": 2026,
+      "doi": "10.1038/s41567-026-03440-y",
+      "arxiv": null,
+      "publication_status": "published",
+      "journal": "Nature Physics (2026)",
+      "publication_date": "2026-09-02",
+      "sources": [
+        "https://www.nature.com/articles/s41567-026-03440-y"
+      ],
+      "read_depth": "publisher search-indexed article metadata, abstract and source-data descriptions",
+      "history": "existing_candidate_2026-11-04_and_repo_documented",
+      "summary_zh": "正交 CrPS₄ 同质结构的磁光、Raman 与 DFT 证据构成实验参照。实验厚度和 90° 几何应明确记录，不能把小角连续模型能带当成这些光谱的直接复现。",
+      "implementation_scope": "实验背景与材料选取；无本次新增的拟合电子模型。",
+      "equations": null
+    },
+    {
+      "id": "cui_magnon_2026",
+      "priority": "C",
+      "title": "Altermagnetic Magnons in Twisted van der Waals Antiferromagnets",
+      "authors": [
+        "Qirui Cui",
+        "Xiaocheng Bai",
+        "Yuqing Ge",
+        "Alexander Edström",
+        "Cong Li",
+        "Yasmine Sassa",
+        "Cheng Song",
+        "Kaiyou Wang",
+        "Anna Delin"
+      ],
+      "year": 2026,
+      "doi": "10.1021/acs.nanolett.6c00198",
+      "arxiv": null,
+      "publication_status": "published",
+      "journal": "Nano Letters 26, 5078–5085 (2026)",
+      "publication_date": "2026-04-07",
+      "issue_date": "2026-04-22",
+      "sources": [
+        "https://pubs.acs.org/doi/10.1021/acs.nanolett.6c00198",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13107460/"
+      ],
+      "read_depth": "publisher metadata; PMC abstract and spin Hamiltonian section inspected",
+      "history": "existing_candidate_2026-11-04_and_repo_documented",
+      "summary_zh": "转角改变层内交换分布，在 CrPS₄/CrI₃ 产生交错磁磁振子劈裂。它适合未来独立自旋波分支；电子费米子 TB 的本征求解不能直接替代玻色 BdG 问题。",
+      "implementation_scope": "玻色磁振子，非当前电子 TB 新预设。",
+      "equations": "spin Hamiltonian Eq.1"
+    },
+    {
+      "id": "ding_cro_2026",
+      "priority": "C",
+      "title": "Twist-induced magnetic topological phase transition in stacked altermagnetic CrO",
+      "authors": [
+        "Zi-Hao Ding",
+        "Ze-Feng Gao",
+        "Xiang-Hua Kong",
+        "Peng-Jie Guo",
+        "Zhong-Yi Lu"
+      ],
+      "year": 2026,
+      "doi": null,
+      "arxiv": "2608.01235",
+      "arxiv_version": "v1",
+      "publication_status": "preprint_no_journal_reference_found",
+      "journal": null,
+      "publication_date": "2026-08-02",
+      "sources": [
+        "https://arxiv.org/abs/2608.01235",
+        "https://arxiv.org/html/2608.01235v1"
+      ],
+      "read_depth": "metadata/abstract and HTML searched; no complete electronic hopping table extracted",
+      "history": "new_relative_to_checked_records_only",
+      "summary_zh": "公度扭转 CrO 的磁性与拓扑相变给出通用动量处的 Weyl 点。建议后续导入可核验 Wannier 数据并做全 BZ 节点搜索；本次仅补充候选记录。",
+      "implementation_scope": "材料 DFT/拓扑研究；当前通用几何与谐波不是该材料的复现。",
+      "equations": null
+    },
+    {
+      "id": "mu_spinmoire_2026",
+      "priority": "C",
+      "title": "Direct observation of quadruple spin-texture locking in a 2D d-wave altermagnet",
+      "authors": [
+        "Dan Mu",
+        "Bei Jiang",
+        "Qingchen Duan",
+        "Zulin Xu",
+        "Xingkai Cheng",
+        "Yusen Xiao",
+        "Xinru Han",
+        "Xinyu Liang",
+        "Zhaokun Luo",
+        "Ryan L. Kong",
+        "Qiheng Wang",
+        "Junwei Liu",
+        "Jianxin Zhong",
+        "Ruidan Zhong",
+        "Qiangqiang Gu",
+        "Baiqing Lv",
+        "Hong Ding"
+      ],
+      "year": 2026,
+      "doi": null,
+      "arxiv": "2604.18337",
+      "arxiv_version": "v1",
+      "publication_status": "preprint_no_journal_reference_found",
+      "journal": null,
+      "publication_date": "2026-04-20",
+      "sources": [
+        "https://arxiv.org/abs/2604.18337"
+      ],
+      "read_depth": "arXiv metadata and abstract only; HTML fulltext unavailable",
+      "history": "new_relative_to_checked_records_only",
+      "summary_zh": "RbV₂Se₂O 自旋 STM/QPI 报告自旋纹理锁定，并将条纹归因于自旋密度波 moiré。它扩展了观察方向，但该 moiré 不是双层几何扭角，结论按预印本处理。",
+      "implementation_scope": "实验候选；需完整散射/纹理模型，当前无可复用跃迁表。",
+      "equations": null
+    },
+    {
+      "id": "hawashin_wse2_2026",
+      "priority": "peripheral",
+      "title": "Relativistic Mott transition and high-order van Hove singularity in twisted double bilayer WSe2: Mean-field and functional renormalization group study",
+      "authors": [
+        "Bilal Hawashin",
+        "Julian Kleeschulte",
+        "David Kurz",
+        "Aiman Al-Eryani",
+        "Michael M. Scherer"
+      ],
+      "year": 2026,
+      "doi": "10.1103/tchf-w8h7",
+      "arxiv": "2509.09398",
+      "arxiv_version": "v2",
+      "publication_status": "published",
+      "journal": "Physical Review B 113, 075107 (2026)",
+      "publication_date": "2026-02-03",
+      "sources": [
+        "https://journals.aps.org/prb/abstract/10.1103/tchf-w8h7",
+        "https://arxiv.org/html/2509.09398v2"
+      ],
+      "read_depth": "journal metadata; arXiv continuum Eqs.1-5 and TB fitting section inspected",
+      "history": "existing_daily_implemented_2026-11-07",
+      "summary_zh": "ABBA WSe₂ 的 Γ 谷四层连续模型可检验截断收敛、鞍点与拟合方法。保留为外围可复用基准；单粒子部分自旋简并，不能计成交错磁模型。",
+      "implementation_scope": "复用既有日报非相互作用模型；不声称实现 Mott 相图或 fRG。",
+      "equations": "arXiv v2 Eqs.1-5; honeycomb TB fit Eq.6"
+    },
+    {
+      "id": "he_twisted_nicl2_2023",
+      "priority": "A",
+      "title": "Nonrelativistic Spin-Momentum Coupling in Antiferromagnetic Twisted Bilayers",
+      "authors": [
+        "Ran He",
+        "Dan Wang",
+        "Nannan Luo",
+        "Jiang Zeng",
+        "Ke-Qiu Chen",
+        "Li-Ming Tang"
+      ],
+      "year": 2023,
+      "doi": "10.1103/PhysRevLett.130.046401",
+      "publication_status": "published",
+      "journal": "Physical Review Letters 130, 046401 (2023)",
+      "publication_date": "2023-01-25",
+      "sources": [
+        "https://doi.org/10.1103/PhysRevLett.130.046401",
+        "https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevLett.130.046401/fulltext"
+      ],
+      "read_depth": "publisher abstract and primary fulltext opening inspected; full study already cited in prior local NiCl2 manuscript",
+      "history": "existing_prior_twist_research",
+      "summary_zh": "NiCl2转角双层的非相对论自旋动量耦合，为既有VASP算例的材料与对称性参照。",
+      "implementation_scope": "本轮单轨道参数未拟合该文的DFT能带；继承本地固定结构计算的边界。"
+    },
+    {
+      "id": "wong_supermoire_2026",
+      "priority": "B",
+      "title": "Super-moiré spin textures in twisted two-dimensional antiferromagnets",
+      "authors": [
+        "King Cho Wong",
+        "Ruoming Peng",
+        "Eric Anderson",
+        "et al."
+      ],
+      "year": 2026,
+      "doi": "10.1038/s41565-025-02103-y",
+      "publication_status": "published",
+      "journal": "Nature Nanotechnology 21, 359–365 (2026)",
+      "publication_date": "2026-02-02",
+      "sources": [
+        "https://www.nature.com/articles/s41565-025-02103-y"
+      ],
+      "read_depth": "publisher abstract and main introduction inspected; prior manuscript uses this as spin-texture comparison",
+      "history": "existing_prior_twist_research",
+      "summary_zh": "CrI3双双层中磁纹理尺度可超过几何莫尔周期，且转角趋势由多种磁相互作用竞争决定。",
+      "implementation_scope": "用于区分几何周期与磁响应长度；当前固定磁序电子TB不复现平衡磁织构。"
+    }
+  ]
+}

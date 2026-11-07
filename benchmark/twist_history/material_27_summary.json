@@ -1,0 +1,707 @@
+{
+  "angle_deg": 27.795772496027972,
+  "atom_count": 78,
+  "scf": {
+    "source_folder": "recovery_scf_03",
+    "reached_ediff": true,
+    "numerical_settings": {
+      "ALGO": "Fast",
+      "NBANDS": "324",
+      "NSIM": "4",
+      "LREAL": ".FALSE.",
+      "EDIFF": "1E-7",
+      "ISTART": "1",
+      "ICHARG": "1"
+    },
+    "steps": 5,
+    "net_moment_muB": 0.0,
+    "electronic_step_history": [
+      {
+        "folder": "recovery_scf_01",
+        "iterations": 14,
+        "last_dE_eV": -0.011008,
+        "last_band_energy_change_eV": -0.00068201,
+        "reached_ediff": false
+      },
+      {
+        "folder": "recovery_scf_02",
+        "iterations": 14,
+        "last_dE_eV": -4.6995e-06,
+        "last_band_energy_change_eV": -2.4567e-08,
+        "reached_ediff": false
+      },
+      {
+        "folder": "recovery_scf_03",
+        "iterations": 5,
+        "last_dE_eV": -4.2346e-08,
+        "last_band_energy_change_eV": -7.9896e-08,
+        "reached_ediff": true
+      }
+    ],
+    "max_force_eV_per_A": 0.68599953,
+    "energy_eV_per_atom": -3.472140305128205,
+    "uniform_mesh_sampled_gap_eV": 2.2331719999999997,
+    "uniform_mesh_max_abs_spin_energy_difference_meV": {
+      "VB": 0.0009999999996956888,
+      "CB": 0.06300000000003525,
+      "all_occupied": 0.08700000000061436,
+      "all_unoccupied": 37.190000000000055
+    },
+    "smooth_density": {
+      "fft_shape_xyz": [
+        192,
+        192,
+        384
+      ],
+      "integrated_charge_e": 623.9999655301957,
+      "lower_half_moment_per_Ni_muB": 1.994616529128918,
+      "upper_half_moment_per_Ni_muB": -1.9946165291289168,
+      "C2x_magnetization_sign_reversal_L1": 1.5000380132986742e-07
+    },
+    "DOS": {
+      "energy_reference": "Highest occupied EIGENVAL eigenvalue of the uniform SCF mesh, over both spins",
+      "absolute_reference_eV": -2.97268,
+      "fermi_minus_reference_eV": 0.22682591000000007,
+      "exported_energy_range_minus_reference_eV": [
+        -16.23632,
+        3.35068
+      ],
+      "native_DOS_units": "states per eV per atom per spin",
+      "broadening_eV": 0.05,
+      "IDOS_at_Fermi_states_per_atom_up_down": [
+        4.0,
+        4.0
+      ],
+      "occupied_states_per_atom_expected_each_spin": 4.0,
+      "full_exported_energy_range_integral_states_per_atom_up_down": [
+        4.153795032248803,
+        4.153805047930484
+      ],
+      "raw_spin_L1_difference_divided_by_mean_DOS_full": 0.00031285805260526065,
+      "raw_spin_L1_difference_divided_by_mean_DOS_by_window_eV": {
+        "-2:0": 9.757618797549408e-06,
+        "-2:3": 0.0008962248005575804,
+        "1:3": 0.008324918801630152
+      },
+      "k4_geometric_weights_verified_as_same_spin_orbits": true
+    }
+  },
+  "probe": {
+    "steps": 11,
+    "edge": {
+      "VB": {
+        "band_1_based": 312,
+        "points": {
+          "Gamma": {
+            "delta_meV": 0.0,
+            "up": {
+              "energy_eV": -2.97252,
+              "lower_projected_weight": 0.8421,
+              "upper_projected_weight": 0.0,
+              "lower_fraction_of_projected_weight": 0.9999999999999999,
+              "Ni_d_weight": 0.28509999999999996,
+              "Cl_p_weight": 0.5569999999999999,
+              "Ni_d_effective_sites": 12.999027655834942
+            },
+            "down": {
+              "energy_eV": -2.97252,
+              "lower_projected_weight": 0.0,
+              "upper_projected_weight": 0.8418000000000001,
+              "lower_fraction_of_projected_weight": 0.0,
+              "Ni_d_weight": 0.28440000000000004,
+              "Cl_p_weight": 0.5574000000000001,
+              "Ni_d_effective_sites": 12.998948941709662
+            }
+          },
+          "Q": {
+            "delta_meV": -14.527000000000179,
+            "up": {
+              "energy_eV": -3.06414,
+              "lower_projected_weight": 0.8262999999999999,
+              "upper_projected_weight": 0.0,
+              "lower_fraction_of_projected_weight": 0.9999999999999999,
+              "Ni_d_weight": 0.2522,
+              "Cl_p_weight": 0.5741,
+              "Ni_d_effective_sites": 12.995059801329646
+            },
+            "down": {
+              "energy_eV": -3.049613,
+              "lower_projected_weight": 0.0,
+              "upper_projected_weight": 0.8291999999999999,
+              "lower_fraction_of_projected_weight": 0.0,
+              "Ni_d_weight": 0.25730000000000003,
+              "Cl_p_weight": 0.5719,
+              "Ni_d_effective_sites": 12.996913877147968
+            }
+          },
+          "Q_reflected": {
+            "delta_meV": 14.527000000000179,
+            "up": {
+              "energy_eV": -3.049613,
+              "lower_projected_weight": 0.8289999999999998,
+              "upper_projected_weight": 0.0,
+              "lower_fraction_of_projected_weight": 0.9999999999999999,
+              "Ni_d_weight": 0.2571,
+              "Cl_p_weight": 0.5719,
+              "Ni_d_effective_sites": 12.9965670400453
+            },
+            "down": {
+              "energy_eV": -3.06414,
+              "lower_projected_weight": 0.0,
+              "upper_projected_weight": 0.8268999999999999,
+              "lower_fraction_of_projected_weight": 0.0,
+              "Ni_d_weight": 0.2524,
+              "Cl_p_weight": 0.5744999999999999,
+              "Ni_d_effective_sites": 12.9940155424562
+            }
+          },
+          "C2x_node": {
+            "delta_meV": 0.0009999999996956888,
+            "up": {
+              "energy_eV": -3.087387,
+              "lower_projected_weight": 0.8238000000000001,
+              "upper_projected_weight": 0.0009,
+              "lower_fraction_of_projected_weight": 0.9989086940705713,
+              "Ni_d_weight": 0.2603,
+              "Cl_p_weight": 0.5638,
+              "Ni_d_effective_sites": 12.978626936802161
+            },
+            "down": {
+              "energy_eV": -3.087388,
+              "lower_projected_weight": 0.001,
+              "upper_projected_weight": 0.8240999999999998,
+              "lower_fraction_of_projected_weight": 0.0012119743061447098,
+              "Ni_d_weight": 0.2604,
+              "Cl_p_weight": 0.5640999999999998,
+              "Ni_d_effective_sites": 12.979923737768182
+            }
+          }
+        },
+        "reflection_delta_residual_meV": 0.0,
+        "reflection_site_spin_L1": 0.0025366914296068217
+      },
+      "CB": {
+        "band_1_based": 313,
+        "points": {
+          "Gamma": {
+            "delta_meV": -0.16900000000008575,
+            "up": {
+              "energy_eV": -0.68754,
+              "lower_projected_weight": 0.001,
+              "upper_projected_weight": 0.8979999999999998,
+              "lower_fraction_of_projected_weight": 0.0011123470522803114,
+              "Ni_d_weight": 0.7707999999999999,
+              "Cl_p_weight": 0.11070000000000002,
+              "Ni_d_effective_sites": 9.217223486075477
+            },
+            "down": {
+              "energy_eV": -0.687371,
+              "lower_projected_weight": 0.8985,
+              "upper_projected_weight": 0.0011,
+              "lower_fraction_of_projected_weight": 0.9987772343263674,
+              "Ni_d_weight": 0.7703,
+              "Cl_p_weight": 0.1114,
+              "Ni_d_effective_sites": 8.152621914147435
+            }
+          },
+          "Q": {
+            "delta_meV": -11.222000000000065,
+            "up": {
+              "energy_eV": -0.722133,
+              "lower_projected_weight": 0.0013000000000000002,
+              "upper_projected_weight": 0.8896000000000003,
+              "lower_fraction_of_projected_weight": 0.0014591985632506457,
+              "Ni_d_weight": 0.7602,
+              "Cl_p_weight": 0.11189999999999999,
+              "Ni_d_effective_sites": 12.93116346093603
+            },
+            "down": {
+              "energy_eV": -0.710911,
+              "lower_projected_weight": 0.8844000000000001,
+              "upper_projected_weight": 0.0006000000000000001,
+              "lower_fraction_of_projected_weight": 0.9993220338983052,
+              "Ni_d_weight": 0.7545999999999999,
+              "Cl_p_weight": 0.12279999999999999,
+              "Ni_d_effective_sites": 12.961781238575774
+            }
+          },
+          "Q_reflected": {
+            "delta_meV": 11.84099999999999,
+            "up": {
+              "energy_eV": -0.710553,
+              "lower_projected_weight": 0.0008,
+              "upper_projected_weight": 0.8852000000000002,
+              "lower_fraction_of_projected_weight": 0.0009029345372460497,
+              "Ni_d_weight": 0.7546,
+              "Cl_p_weight": 0.1237,
+              "Ni_d_effective_sites": 12.927428377352461
+            },
+            "down": {
+              "energy_eV": -0.722394,
+              "lower_projected_weight": 0.8898,
+              "upper_projected_weight": 0.0013000000000000002,
+              "lower_fraction_of_projected_weight": 0.9985411289417573,
+              "Ni_d_weight": 0.7605999999999999,
+              "Cl_p_weight": 0.11159999999999999,
+              "Ni_d_effective_sites": 12.943732548149207
+            }
+          },
+          "C2x_node": {
+            "delta_meV": -0.5450000000000177,
+            "up": {
+              "energy_eV": -0.703238,
+              "lower_projected_weight": 0.0006000000000000001,
+              "upper_projected_weight": 0.8880000000000001,
+              "lower_fraction_of_projected_weight": 0.0006752194463200541,
+              "Ni_d_weight": 0.7596,
+              "Cl_p_weight": 0.12090000000000001,
+              "Ni_d_effective_sites": 12.911920706750411
+            },
+            "down": {
+              "energy_eV": -0.702693,
+              "lower_projected_weight": 0.8886,
+              "upper_projected_weight": 0.0004,
+              "lower_fraction_of_projected_weight": 0.9995500562429696,
+              "Ni_d_weight": 0.7599,
+              "Cl_p_weight": 0.1212,
+              "Ni_d_effective_sites": 12.805994010912356
+            }
+          }
+        },
+        "reflection_delta_residual_meV": 0.6189999999999252,
+        "reflection_site_spin_L1": 0.037602026456515614
+      }
+    },
+    "probe_point_count": 4,
+    "probe_cartesian_A_inv": {
+      "Gamma": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Q": [
+        0.29766947771009844,
+        0.10311573669513152,
+        0.0
+      ],
+      "Q_reflected": [
+        0.29766947771009844,
+        -0.10311573059438715,
+        0.0
+      ],
+      "C2x_node": [
+        0.29766947771009844,
+        1.3797641823234538e-10,
+        0.0
+      ]
+    },
+    "edge_occupations": {
+      "min_VB": 1.0,
+      "max_CB": 0.0
+    },
+    "probe_sampled_gap_eV": 2.250126,
+    "source_folder": "recovery_probe",
+    "electronic_steps": {
+      "folder": "recovery_probe",
+      "iterations": 11,
+      "last_dE_eV": -5.227e-08,
+      "last_band_energy_change_eV": -5.2343e-08,
+      "reached_ediff": true
+    }
+  },
+  "comparison_cartesian_Q_A_inv": [
+    0.2976694799071473,
+    0.10311573261235644
+  ],
+  "comparison_scope": "Rigid A-type AFM and collinear PBE+U without SOC. Matched ENCUT and fractional SCF mesh, same Cartesian Q and Q_reflected, different cell size and band folding. Nodes are independently selected symmetry points. Gaps reflect each specified k-point sampling.",
+  "matched_21_78679_deg_500eV_k4_reference": {
+    "scf_steps": 32,
+    "probe_steps": 16,
+    "mesh_sampled_gap_eV": 2.233303,
+    "probe_delta_meV": {
+      "VB": {
+        "Gamma": 0.0,
+        "Q": 54.50299999999997,
+        "Q_reflected": -54.50200000000027,
+        "symmetry_node": -0.001000000000139778
+      },
+      "CB": {
+        "Gamma": 0.0,
+        "Q": -35.90599999999999,
+        "Q_reflected": 35.90599999999999,
+        "symmetry_node": 0.0009999999999177334
+      }
+    },
+    "DOS": {
+      "energy_reference": "Highest occupied EIGENVAL eigenvalue of the uniform SCF mesh, over both spins",
+      "absolute_reference_eV": -2.972743,
+      "fermi_minus_reference_eV": 0.22855329999999974,
+      "exported_energy_range_minus_reference_eV": [
+        -16.479257,
+        8.457743
+      ],
+      "native_DOS_units": "states per eV per atom per spin",
+      "broadening_eV": 0.05,
+      "IDOS_at_Fermi_states_per_atom_up_down": [
+        4.0,
+        4.0
+      ],
+      "occupied_states_per_atom_expected_each_spin": 4.0,
+      "full_exported_energy_range_integral_states_per_atom_up_down": [
+        4.666219537996176,
+        4.666218519450498
+      ],
+      "raw_spin_L1_difference_divided_by_mean_DOS_full": 0.00010690070262876704,
+      "raw_spin_L1_difference_divided_by_mean_DOS_by_window_eV": {
+        "-2:0": 0.0,
+        "-2:3": 2.0049391973360553e-16,
+        "1:3": 9.796730077520977e-16
+      },
+      "k4_geometric_weights_verified_as_same_spin_orbits": true
+    }
+  },
+  "archived_21_78679_deg_600eV_k6_projection_reference": {
+    "steps": 10,
+    "edge": {
+      "VB": {
+        "band_1_based": 168,
+        "points": {
+          "Q": {
+            "delta_meV": 54.47800000000002,
+            "up": {
+              "energy_eV": -3.063361,
+              "lower_projected_weight": 0.8263,
+              "upper_projected_weight": 0.0,
+              "lower_fraction_of_projected_weight": 1.0,
+              "Ni_d_weight": 0.25170000000000003,
+              "Cl_p_weight": 0.5746,
+              "Ni_d_effective_sites": 6.9979299885453505
+            },
+            "down": {
+              "energy_eV": -3.117839,
+              "lower_projected_weight": 0.0015,
+              "upper_projected_weight": 0.8196999999999999,
+              "lower_fraction_of_projected_weight": 0.0018265952264978082,
+              "Ni_d_weight": 0.25749999999999995,
+              "Cl_p_weight": 0.5637000000000001,
+              "Ni_d_effective_sites": 6.975500731674729
+            }
+          },
+          "Q_reflected": {
+            "delta_meV": -54.47599999999974,
+            "up": {
+              "energy_eV": -3.117838,
+              "lower_projected_weight": 0.8195999999999999,
+              "upper_projected_weight": 0.0014999999999999998,
+              "lower_fraction_of_projected_weight": 0.9981731823164046,
+              "Ni_d_weight": 0.25749999999999995,
+              "Cl_p_weight": 0.5636,
+              "Ni_d_effective_sites": 6.975500731674727
+            },
+            "down": {
+              "energy_eV": -3.063362,
+              "lower_projected_weight": 0.0,
+              "upper_projected_weight": 0.8265,
+              "lower_fraction_of_projected_weight": 0.0,
+              "Ni_d_weight": 0.2518,
+              "Cl_p_weight": 0.5747,
+              "Ni_d_effective_sites": 6.99799562923556
+            }
+          }
+        },
+        "reflection_delta_residual_meV": 0.002000000000279556,
+        "reflection_site_spin_L1": 0.00015174046311189565
+      },
+      "CB": {
+        "band_1_based": 169,
+        "points": {
+          "Q": {
+            "delta_meV": -35.90199999999999,
+            "up": {
+              "energy_eV": -0.737171,
+              "lower_projected_weight": 0.0014000000000000002,
+              "upper_projected_weight": 0.8925999999999998,
+              "lower_fraction_of_projected_weight": 0.0015659955257270697,
+              "Ni_d_weight": 0.7719,
+              "Cl_p_weight": 0.1018,
+              "Ni_d_effective_sites": 6.995309454269703
+            },
+            "down": {
+              "energy_eV": -0.701269,
+              "lower_projected_weight": 0.9001999999999999,
+              "upper_projected_weight": 0.0014000000000000002,
+              "lower_fraction_of_projected_weight": 0.998447204968944,
+              "Ni_d_weight": 0.7807,
+              "Cl_p_weight": 0.10139999999999999,
+              "Ni_d_effective_sites": 6.992210845001024
+            }
+          },
+          "Q_reflected": {
+            "delta_meV": 35.90300000000002,
+            "up": {
+              "energy_eV": -0.701267,
+              "lower_projected_weight": 0.0014000000000000002,
+              "upper_projected_weight": 0.9005,
+              "lower_fraction_of_projected_weight": 0.0015522785231178626,
+              "Ni_d_weight": 0.7811,
+              "Cl_p_weight": 0.1013,
+              "Ni_d_effective_sites": 6.992411596509006
+            },
+            "down": {
+              "energy_eV": -0.73717,
+              "lower_projected_weight": 0.8930999999999999,
+              "upper_projected_weight": 0.0014000000000000002,
+              "lower_fraction_of_projected_weight": 0.998434879821129,
+              "Ni_d_weight": 0.7723,
+              "Cl_p_weight": 0.1019,
+              "Ni_d_effective_sites": 6.9955030129062905
+            }
+          }
+        },
+        "reflection_delta_residual_meV": 0.0010000000000331966,
+        "reflection_site_spin_L1": 0.0005567928730512471
+      }
+    },
+    "probe_point_count": 2,
+    "probe_cartesian_A_inv": {
+      "Q": [
+        0.2976694799293263,
+        0.10311573261235644,
+        0.0
+      ],
+      "Q_reflected": [
+        0.29766947992932624,
+        -0.10311573261235644,
+        0.0
+      ]
+    },
+    "edge_occupations": {
+      "min_VB": 1.0,
+      "max_CB": 0.0
+    },
+    "probe_sampled_gap_eV": 2.32619
+  },
+  "probe_refinement": {
+    "steps": 7,
+    "edge": {
+      "VB": {
+        "band_1_based": 312,
+        "points": {
+          "Gamma": {
+            "delta_meV": 0.0,
+            "up": {
+              "energy_eV": -2.97252,
+              "lower_projected_weight": 0.8421,
+              "upper_projected_weight": 0.0,
+              "lower_fraction_of_projected_weight": 0.9999999999999999,
+              "Ni_d_weight": 0.28509999999999996,
+              "Cl_p_weight": 0.5569999999999999,
+              "Ni_d_effective_sites": 12.999027655834942
+            },
+            "down": {
+              "energy_eV": -2.97252,
+              "lower_projected_weight": 0.0,
+              "upper_projected_weight": 0.8418000000000001,
+              "lower_fraction_of_projected_weight": 0.0,
+              "Ni_d_weight": 0.28440000000000004,
+              "Cl_p_weight": 0.5574000000000001,
+              "Ni_d_effective_sites": 12.998948941709662
+            }
+          },
+          "Q": {
+            "delta_meV": -14.527000000000179,
+            "up": {
+              "energy_eV": -3.06414,
+              "lower_projected_weight": 0.8262999999999999,
+              "upper_projected_weight": 0.0,
+              "lower_fraction_of_projected_weight": 0.9999999999999999,
+              "Ni_d_weight": 0.2522,
+              "Cl_p_weight": 0.5741,
+              "Ni_d_effective_sites": 12.995059801329646
+            },
+            "down": {
+              "energy_eV": -3.049613,
+              "lower_projected_weight": 0.0,
+              "upper_projected_weight": 0.8291999999999999,
+              "lower_fraction_of_projected_weight": 0.0,
+              "Ni_d_weight": 0.25730000000000003,
+              "Cl_p_weight": 0.5719,
+              "Ni_d_effective_sites": 12.996913877147968
+            }
+          },
+          "Q_reflected": {
+            "delta_meV": 14.527000000000179,
+            "up": {
+              "energy_eV": -3.049613,
+              "lower_projected_weight": 0.8289999999999998,
+              "upper_projected_weight": 0.0,
+              "lower_fraction_of_projected_weight": 0.9999999999999999,
+              "Ni_d_weight": 0.2571,
+              "Cl_p_weight": 0.5719,
+              "Ni_d_effective_sites": 12.9965670400453
+            },
+            "down": {
+              "energy_eV": -3.06414,
+              "lower_projected_weight": 0.0,
+              "upper_projected_weight": 0.8268999999999999,
+              "lower_fraction_of_projected_weight": 0.0,
+              "Ni_d_weight": 0.2524,
+              "Cl_p_weight": 0.5744999999999999,
+              "Ni_d_effective_sites": 12.9940155424562
+            }
+          },
+          "C2x_node": {
+            "delta_meV": 0.0009999999996956888,
+            "up": {
+              "energy_eV": -3.087387,
+              "lower_projected_weight": 0.8238000000000001,
+              "upper_projected_weight": 0.0009,
+              "lower_fraction_of_projected_weight": 0.9989086940705713,
+              "Ni_d_weight": 0.2603,
+              "Cl_p_weight": 0.5638,
+              "Ni_d_effective_sites": 12.978626936802161
+            },
+            "down": {
+              "energy_eV": -3.087388,
+              "lower_projected_weight": 0.001,
+              "upper_projected_weight": 0.8240999999999998,
+              "lower_fraction_of_projected_weight": 0.0012119743061447098,
+              "Ni_d_weight": 0.2604,
+              "Cl_p_weight": 0.5640999999999998,
+              "Ni_d_effective_sites": 12.979923737768182
+            }
+          }
+        },
+        "reflection_delta_residual_meV": 0.0,
+        "reflection_site_spin_L1": 0.0025366914296068217
+      },
+      "CB": {
+        "band_1_based": 313,
+        "points": {
+          "Gamma": {
+            "delta_meV": 0.003000000000086267,
+            "up": {
+              "energy_eV": -0.688062,
+              "lower_projected_weight": 0.0012000000000000001,
+              "upper_projected_weight": 0.8986000000000001,
+              "lower_fraction_of_projected_weight": 0.001333629695487886,
+              "Ni_d_weight": 0.7707,
+              "Cl_p_weight": 0.11120000000000001,
+              "Ni_d_effective_sites": 7.679805298249057
+            },
+            "down": {
+              "energy_eV": -0.688065,
+              "lower_projected_weight": 0.8983,
+              "upper_projected_weight": 0.0012000000000000001,
+              "lower_fraction_of_projected_weight": 0.9986659255141745,
+              "Ni_d_weight": 0.7706,
+              "Cl_p_weight": 0.1113,
+              "Ni_d_effective_sites": 7.687960329784171
+            }
+          },
+          "Q": {
+            "delta_meV": -12.047999999999949,
+            "up": {
+              "energy_eV": -0.723336,
+              "lower_projected_weight": 0.0013000000000000002,
+              "upper_projected_weight": 0.8893000000000001,
+              "lower_fraction_of_projected_weight": 0.001459690096564114,
+              "Ni_d_weight": 0.7605000000000001,
+              "Cl_p_weight": 0.11099999999999999,
+              "Ni_d_effective_sites": 12.986140877428586
+            },
+            "down": {
+              "energy_eV": -0.711288,
+              "lower_projected_weight": 0.8843000000000001,
+              "upper_projected_weight": 0.0007000000000000001,
+              "lower_fraction_of_projected_weight": 0.9992090395480226,
+              "Ni_d_weight": 0.7545,
+              "Cl_p_weight": 0.12309999999999999,
+              "Ni_d_effective_sites": 12.954114596998574
+            }
+          },
+          "Q_reflected": {
+            "delta_meV": 12.050000000000004,
+            "up": {
+              "energy_eV": -0.711287,
+              "lower_projected_weight": 0.0007000000000000001,
+              "upper_projected_weight": 0.8844000000000002,
+              "lower_fraction_of_projected_weight": 0.0007908710880126541,
+              "Ni_d_weight": 0.7546000000000002,
+              "Cl_p_weight": 0.1231,
+              "Ni_d_effective_sites": 12.954456335731361
+            },
+            "down": {
+              "energy_eV": -0.723337,
+              "lower_projected_weight": 0.8888000000000001,
+              "upper_projected_weight": 0.0013000000000000002,
+              "lower_fraction_of_projected_weight": 0.99853948994495,
+              "Ni_d_weight": 0.7604000000000001,
+              "Cl_p_weight": 0.11059999999999999,
+              "Ni_d_effective_sites": 12.986840397083553
+            }
+          },
+          "C2x_node": {
+            "delta_meV": -0.009000000000036756,
+            "up": {
+              "energy_eV": -0.703729,
+              "lower_projected_weight": 0.0006000000000000001,
+              "upper_projected_weight": 0.888,
+              "lower_fraction_of_projected_weight": 0.000675219446320054,
+              "Ni_d_weight": 0.7595000000000001,
+              "Cl_p_weight": 0.121,
+              "Ni_d_effective_sites": 12.950086825530635
+            },
+            "down": {
+              "energy_eV": -0.70372,
+              "lower_projected_weight": 0.8884000000000001,
+              "upper_projected_weight": 0.0005,
+              "lower_fraction_of_projected_weight": 0.9994375070311622,
+              "Ni_d_weight": 0.7599,
+              "Cl_p_weight": 0.12079999999999999,
+              "Ni_d_effective_sites": 12.94851610099541
+            }
+          }
+        },
+        "reflection_delta_residual_meV": 0.002000000000055735,
+        "reflection_site_spin_L1": 0.0038301227892306037
+      }
+    },
+    "probe_point_count": 4,
+    "probe_cartesian_A_inv": {
+      "Gamma": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Q": [
+        0.29766947771009844,
+        0.10311573669513152,
+        0.0
+      ],
+      "Q_reflected": [
+        0.29766947771009844,
+        -0.10311573059438715,
+        0.0
+      ],
+      "C2x_node": [
+        0.29766947771009844,
+        1.3797641823234538e-10,
+        0.0
+      ]
+    },
+    "edge_occupations": {
+      "min_VB": 1.0,
+      "max_CB": 0.0
+    },
+    "probe_sampled_gap_eV": 2.249183,
+    "source_folder": "refinement_probe",
+    "electronic_steps": {
+      "folder": "refinement_probe",
+      "iterations": 7,
+      "last_dE_eV": 2.9104e-11,
+      "last_band_energy_change_eV": -7.6239e-13,
+      "reached_ediff": true
+    }
+  }
+}

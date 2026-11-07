@@ -1,5 +1,20 @@
 # 交给本地 dsh 的接力说明
 
+## 2026-11-07 发布接力
+
+本轮任务是发布更新后的 **AMMoire 0.2.0**。本机源目录、仓库名和 Pages 选择由仓库外的 `DSH_UPLOAD.md` 提供。先使用该文件中的发布任务；下面原有材料研究接力保留作后续研究记录。
+
+上传前阅读 [更新说明](docs/update_2026-11-07.md)、[转角证据说明](docs/twist_history.md) 和 [发布步骤](RELEASING.md)。新增公度求解器吸收后续多角度研究；`benchmark/twist_history` 是此前计算的派生归档，`benchmark/commensurate` 与 `benchmark/cairo` 是本轮重算。VASP、波函数展开和自旋螺旋的材料结果在本轮仅复核归档，不宣称重跑。
+
+先运行以下新增检查，再运行下方原有基线：
+
+```sh
+python -m examples.commensurate_demo --points 8 --out results/dsh-commensurate
+python -m ammoire.cairo_demo --points 12 --out results/dsh-cairo
+```
+
+25 个原生单层预设与公度 TB 均不依赖旧日报目录。`legacy.daily_model` 仍是可选的外部适配器。公度单轨道电子模型固定磁序，不能代替材料轨道拟合、磁序优化或 VASP 波函数展开。
+
 ## 接力入口
 
 在本地 dsh 客户端打开上传后克隆的仓库目录。把以下文字作为新会话的第一条任务。

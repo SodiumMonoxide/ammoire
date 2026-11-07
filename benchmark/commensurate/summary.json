@@ -1,0 +1,154 @@
+{
+  "model": "CommensurateTriangularBilayer",
+  "parameter_status": "illustrative geometry model; not fitted to NiCl2 or an exact paper reproduction",
+  "twist_deg": 21.78678929826181,
+  "area_in_primitive_cells": 7,
+  "states": 28,
+  "parameters_eV": {
+    "hopping": -0.18,
+    "interlayer": -0.07,
+    "exchange": 0.6
+  },
+  "interlayer_width_a": 0.42,
+  "interlayer_cutoff_a": 1.75,
+  "real_cell_a": [
+    [
+      2.29128784747792,
+      1.3228756555322951
+    ],
+    [
+      -2.220446049250313e-16,
+      2.6457513110645903
+    ]
+  ],
+  "reciprocal_cell_inverse_a": [
+    [
+      2.7422068833890303,
+      2.3013963613980564e-16
+    ],
+    [
+      -1.3711034416945151,
+      2.374820823447452
+    ]
+  ],
+  "spin_difference_convention": "up minus down, same within-spin ascending energy rank; not orbital tracking",
+  "Q_Qprime_fractional": [
+    [
+      0.45,
+      0.15
+    ],
+    [
+      0.3,
+      -0.15
+    ]
+  ],
+  "Q_Qprime_splitting_eV": [
+    [
+      -0.0001222666734630451,
+      0.0020569175810167817,
+      -0.004546872503737975,
+      0.01912800990806185,
+      -0.049166921347984394,
+      0.04174731600012832,
+      0.0010202251036365018,
+      -0.009992112137384046,
+      -0.0020542433835140095,
+      0.004532205465713368,
+      -0.019046037421464823,
+      0.048938380770887635,
+      -0.042421643562351896,
+      0.009927042200457814
+    ],
+    [
+      0.00012226667346415532,
+      -0.0020569175810158935,
+      0.004546872503737753,
+      -0.01912800990806196,
+      0.049166921347984394,
+      -0.04174731600012818,
+      -0.0010202251036365018,
+      0.009992112137384268,
+      0.002054243383514176,
+      -0.004532205465712924,
+      0.0190460374214646,
+      -0.04893838077088808,
+      0.04242164356235267,
+      -0.00992704220045737
+    ]
+  ],
+  "checks": {
+    "residuals": {
+      "hermiticity_eV": 8.741117365843378e-19,
+      "reciprocal_periodicity_eV": 4.46899245057492e-16,
+      "C2_spin_exchange_eV": 3.3306690738754696e-15,
+      "C3_eV": 3.1086244689504383e-15,
+      "inversion_eV": 0.0,
+      "i_wave_nodes_eV": 2.4424906541753444e-15,
+      "zero_twist_splitting_eV": 3.1086244689504383e-15,
+      "zero_exchange_splitting_eV": 0.0
+    },
+    "lowest_branch_lobe_radius_inverse_a": 1.0968827533556122,
+    "lowest_branch_lobe_splitting_eV": [
+      -0.000140931241017217,
+      0.00014093124101788312,
+      -0.0001409312410183272,
+      0.00014093124101743904,
+      -0.0001409312410187713,
+      0.00014093124102010357,
+      -0.00014093124101699495,
+      0.0001409312410183272,
+      -0.00014093124102099175,
+      0.00014093124101588472,
+      -0.00014093124101810517,
+      0.00014093124102210197
+    ],
+    "lowest_branch_gap_to_next_at_lobes_eV": 0.35374536542682167,
+    "lowest_branch_small_k_log_log_slope": 5.991304855863232,
+    "small_k_fit_radii_inverse_a": [
+      0.2522830332717908,
+      0.3290648260066837,
+      0.4058466187415765,
+      0.4826284114764694
+    ],
+    "generic_max_rank_paired_spin_splitting_eV": 0.07573785049216603
+  },
+  "angle_scan": {
+    "validated_pairs": [
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        7,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "radius_conventions": "fixed_ka=0.45 is the same Cartesian radius; fraction_ka=0.8*Gamma-M varies with the supercell",
+    "folding_control": "tb_matched_q.csv separates same primitive Q from folded lowest energy rank; a sign difference can persist at t_perp=0",
+    "magnetic_order": "fixed A-type collinear AFM for every angle, not a prediction of magnetic stability"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "C2_spin_swapped_plane_wave_probability_L1": {
+    "Gamma": 8.168668424965579e-06,
+    "Q": 6.786742973052454e-05,
+    "Q_reflected": 2.444966171685764e-05,
+    "C2x_node": 0.00025413642465217776
+  },
+  "Gamma_comparison_sums_near_degenerate_top_two_bands": true,
+  "max_total_normalized_weight_change_512_vs_1024_z_points": 7.597029530681532e-06,
+  "max_dominant_halfspace_conditional_weight_change_512_vs_1024_z_points": 1.8288312449987743e-06,
+  "wavecar_kinetic_factor_eV_A2": 3.810019750723286
+}

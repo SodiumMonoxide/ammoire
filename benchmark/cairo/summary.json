@@ -1,0 +1,30 @@
+{
+  "source": "https://doi.org/10.1038/s41535-025-00793-0",
+  "unit": "|t| (paper units)",
+  "basis": "A,B,alpha,beta,gamma,eta; physical spin interleaved",
+  "gauge": "periodic cell gauge, d=0 source transformed by U",
+  "strained_delta": 0.1,
+  "band_comparison": "within-spin energy rank, not wavefunction tracking",
+  "unstrained": {
+    "fifth_branch_gamma_power": 3.9797082056204314,
+    "radius_values_ka": [
+      0.04,
+      0.02
+    ],
+    "splitting_on_2r_r": [
+      4.061881315631233e-05,
+      2.574635100005551e-06
+    ]
+  },
+  "strained": {
+    "fifth_branch_gamma_power": 1.9592844683516,
+    "radius_values_ka": [
+      0.04,
+      0.02
+    ],
+    "splitting_on_2r_r": [
+      -0.0043784485489983815,
+      -0.0011259441677875515
+    ]
+  }
+}

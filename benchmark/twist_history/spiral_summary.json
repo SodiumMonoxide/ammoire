@@ -1,0 +1,74 @@
+{
+  "reference": "J. Y. Ni et al., Phys. Rev. Lett. 127, 247204 (2021), Eq. (2) and Table I",
+  "doi": "https://doi.org/10.1103/PhysRevLett.127.247204",
+  "convention": "H = sum_s,sum_(ij in s) J_s S_i dot S_j + sum_NN K_BQ (S_i dot S_j)^2; classical unit spins; each unordered bond once",
+  "method": "601 x 601 reciprocal primitive mesh, local Cartesian refinement, radial refinement of one member of the identified sixfold star; single-q planar spin spirals",
+  "coefficients_meV": {
+    "J1": -3.17,
+    "J2": -0.04,
+    "J3": 0.88,
+    "K_BQ": -0.54
+  },
+  "quadratic_coefficient_meV_per_Ni_times_qa_squared": {
+    "bilinear": -0.1725,
+    "biquadratic": 0.6375000000000001
+  },
+  "K_BQ_zero_curvature_meV": -0.11499999999999999,
+  "bilinear_min_aq_cartesian": [
+    0.42635469452952324,
+    0.0
+  ],
+  "bilinear_min_fractional_reciprocal_basis": [
+    0.06785645714480869,
+    0.033928228572404344
+  ],
+  "bilinear_min_aq_magnitude": 0.42635469452952324,
+  "bilinear_min_meV_per_Ni_relative_to_Gamma": -0.015459485343952806,
+  "with_biquadratic_same_wavevector_meV_per_Ni_relative_to_Gamma": 0.12523646922476972,
+  "full_min_aq_cartesian": [
+    0.0,
+    0.0
+  ],
+  "full_min_meV_per_Ni_relative_to_Gamma": 0.0,
+  "length_scale_convention": "Physical a is 9.14/sqrt(7) \u00c5. Spiral wavelength is 2 pi a/|aq|. Coincidence repeat is a sqrt(N). The Ni-only triangular Bravais beat uses min(theta,60-theta), without asserting full Ni/Cl equivalence.",
+  "a_angstrom_for_length_comparison_only": 3.4545952833043367,
+  "bilinear_spiral_wavelength_nm": 5.091033968855871,
+  "angle_length_scales": [
+    {
+      "theta_deg": 13.1735511,
+      "Ni_per_layer": 19,
+      "L_coincidence_nm": 1.5058231730755869,
+      "Ni_bravais_beat_nm": 1.5058231739016708
+    },
+    {
+      "theta_deg": 21.7867893,
+      "Ni_per_layer": 7,
+      "L_coincidence_nm": 0.914,
+      "Ni_bravais_beat_nm": 0.9139999999279602
+    },
+    {
+      "theta_deg": 27.7957725,
+      "Ni_per_layer": 13,
+      "L_coincidence_nm": 1.245572042992983,
+      "Ni_bravais_beat_nm": 0.7191313542163301
+    },
+    {
+      "theta_deg": 32.2042275,
+      "Ni_per_layer": 13,
+      "L_coincidence_nm": 1.245572042992983,
+      "Ni_bravais_beat_nm": 0.7191313542163302
+    },
+    {
+      "theta_deg": 38.2132107,
+      "Ni_per_layer": 7,
+      "L_coincidence_nm": 0.914,
+      "Ni_bravais_beat_nm": 0.9139999999279601
+    },
+    {
+      "theta_deg": 46.8264489,
+      "Ni_per_layer": 19,
+      "L_coincidence_nm": 1.5058231730755869,
+      "Ni_bravais_beat_nm": 1.5058231739016712
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "archive_date": "2026-11-07",
+  "provenance": "Previously computed derivative data, copied byte-for-byte; not regenerated material calculations",
+  "files": [
+    {
+      "file": "angle_scan.csv",
+      "origin_study": "2026-11-06 NiCl2 angle study",
+      "origin_relative_file": "results/angle_scan.csv",
+      "sha256": "1269623c7c654018a8433003ef8785c6a47258182e8136e887b6221dff16d7d8"
+    },
+    {
+      "file": "matched_static_moments.json",
+      "origin_study": "2026-11-06 NiCl2 angle study",
+      "origin_relative_file": "pubs/matched_static_moments.json",
+      "sha256": "da4d8afa6b174f9609e9fd1c38bb93566fcf205b49f703105fd56e31fd9f6814"
+    },
+    {
+      "file": "material_27_summary.json",
+      "origin_study": "2026-11-06 NiCl2 angle study",
+      "origin_relative_file": "vasp-angle27/analysis/summary.json",
+      "sha256": "cf5c8e7e11e62f0619d9bd708ef835fb4c5e7cb55c25d0347ce58835637bb68b"
+    },
+    {
+      "file": "same_momentum_edges.json",
+      "origin_study": "2026-11-06 NiCl2 angle study",
+      "origin_relative_file": "pub_mechanism/same_momentum_edges.json",
+      "sha256": "f48f08e39fcda19f926a520e172f59e421d3511a0e479db8304662d8e2365dee"
+    },
+    {
+      "file": "spiral_summary.json",
+      "origin_study": "2026-11-06 NiCl2 angle study",
+      "origin_relative_file": "pubs_spin/spiral_summary.json",
+      "sha256": "3bb2df496fe0537ce2bfeb1f7564955fb62d81856188820d2a6275b5abc20e2d"
+    },
+    {
+      "file": "symmetry_checks.json",
+      "origin_study": "2026-11-06 NiCl2 angle study",
+      "origin_relative_file": "results/symmetry_checks.json",
+      "sha256": "b77459c60bf7b16803d41cb7ed63df674f0f83b43e645a0654b1c0d9e6fee377"
+    },
+    {
+      "file": "tb_matched_q.csv",
+      "origin_study": "2026-11-06 NiCl2 angle study",
+      "origin_relative_file": "results/tb_matched_q.csv",
+      "sha256": "98e4242a2b6282a50aaeee342172252ac9af949eb1fc0d9f978f5be6e6a6841d"
+    },
+    {
+      "file": "unfolded_sector_weights.csv",
+      "origin_study": "2026-11-06 NiCl2 angle study",
+      "origin_relative_file": "pub_mechanism/unfolded_sector_weights.csv",
+      "sha256": "3050feeadda33d5004069dd7e0b3916ac322eecf1ec7f3627d2cc0f267330147"
+    },
+    {
+      "file": "unfolding_checks.json",
+      "origin_study": "2026-11-06 NiCl2 angle study",
+      "origin_relative_file": "pub_mechanism/unfolding_checks.json",
+      "sha256": "9b35acf3c4d48e832130404948c07a2c479f69f47ae251d258caf18486d51d35"
+    },
+    {
+      "file": "vasp21_convergence.csv",
+      "origin_study": "2026-11-06 initial NiCl2 study",
+      "origin_relative_file": "ch/outputs/DFT/convergence.csv",
+      "sha256": "0fe0d2cafc7b97437d7eb84677914f1afab90cd7559d514e4063eaa799120c20"
+    }
+  ]
+}

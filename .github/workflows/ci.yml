@@ -29,3 +29,5 @@ jobs:
       - run: python -m ammoire.wannier
       - run: python -m ammoire.vasp_bridge --self-test
       - run: ammoire demo --shells 1 --points 3 --check-cutoff --out results/ci
+      - run: python -m ammoire.cairo_demo --points 8 --out results/ci-cairo
+      - run: python -m examples.commensurate_demo --points 8 --out results/ci-commensurate

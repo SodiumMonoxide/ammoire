@@ -12,6 +12,8 @@ from typing import Callable, Mapping
 
 import numpy as np
 
+from .cairo import SOURCE as CAIRO, evaluate as _cairo
+
 
 IDENTITY = np.eye(2, dtype=complex)
 PAULI = np.array([[[0, 1], [1, 0]], [[0, -1j], [1j, 0]], [[1, 0], [0, -1]]])
@@ -366,6 +368,10 @@ def _spec(dimension, geometry, size, form, source, implementation, evaluate, **d
 
 
 _MODELS = {
+    'cairo': _spec(2, 'square', 12, 'g to d under diagonal strain', CAIRO,
+                   'Eqs. (S5)-(S7), d=0 transformed to periodic cell gauge; |t| units',
+                   _cairo, t=1.0, tm=0.2, tn1=0.9, tn2=0.6, j=1.0,
+                   delta=0.0, eps_m=0.0, eps_nm=0.0),
     'square-dxy': _spec(2, 'square', 2, 'dxy', EZAWA, 'Eq. (68), configurable scales',
                        _square_effective(lambda x, y: np.sin(x) * np.sin(y)), t=1.0),
     'square-dx2-y2': _spec(2, 'square', 2, 'dx2-y2', ANTONENKO,

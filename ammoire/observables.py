@@ -33,15 +33,26 @@ def resolve_bands(hamiltonian, operator, *, tolerance=1e-10):
     Within numerically degenerate groups, diagonalize the projection of Q.
     If Q does not commute with H, the result is an expectation, not a sector.
     The tolerance is absolute in H units.
+
+    H and Q must be finite and Hermitian to 1e-12 plus 16 machine epsilons
+    times their largest entry. Accepted rounding errors are symmetrized.
+    This input check is independent of the degeneracy grouping tolerance.
     """
     if tolerance < 0 or not np.isfinite(tolerance):
         raise ValueError("tolerance must be finite and nonnegative")
     hamiltonian, operator = (np.asarray(matrix, complex) for matrix in (hamiltonian, operator))
     if (hamiltonian.ndim != 2 or hamiltonian.shape != operator.shape
             or hamiltonian.shape[0] != hamiltonian.shape[1]
-            or not np.allclose(operator, operator.conj().T)
-            or not np.allclose(hamiltonian, hamiltonian.conj().T)):
-        raise ValueError("H and Q must be equally sized Hermitian matrices")
+            or hamiltonian.shape[0] == 0):
+        raise ValueError("H and Q must be equally sized nonempty square matrices")
+    for name, matrix in (("H", hamiltonian), ("Q", operator)):
+        if not np.all(np.isfinite(matrix)):
+            raise ValueError(f"{name} must be finite")
+        limit = 1e-12 + 16 * np.finfo(float).eps * np.max(np.abs(matrix))
+        if np.max(np.abs(matrix - matrix.conj().T)) > limit:
+            raise ValueError(f"{name} must be Hermitian")
+    hamiltonian = 0.5 * hamiltonian + 0.5 * hamiltonian.conj().T
+    operator = 0.5 * operator + 0.5 * operator.conj().T
     energies, vectors = np.linalg.eigh(hamiltonian)
     first = 0
     while first < len(energies):

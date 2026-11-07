@@ -1,0 +1,74 @@
+[
+  {
+    "point": "Q",
+    "representative_supercell_g": [
+      0,
+      0
+    ],
+    "primitive_k_A_inverse": [
+      0.29766947990715703,
+      0.10311573261237084
+    ],
+    "up_band": 312,
+    "down_band": 309,
+    "up_energy_eV": -3.064139725184194,
+    "down_energy_eV": -3.129012834792838,
+    "up_total_norm_in_layer_and_sector": 0.9988105161811351,
+    "down_total_norm_in_layer_and_sector": 0.9910449647147526,
+    "delta_meV": 64.8731096086439
+  },
+  {
+    "point": "Q",
+    "representative_supercell_g": [
+      -1,
+      -1
+    ],
+    "primitive_k_A_inverse": [
+      -0.20677226174286797,
+      -0.188123842719753
+    ],
+    "up_band": 310,
+    "down_band": 312,
+    "up_energy_eV": -3.0967009018637164,
+    "down_energy_eV": -3.049612960781474,
+    "up_total_norm_in_layer_and_sector": 0.9588768536991811,
+    "down_total_norm_in_layer_and_sector": 0.9990410821746069,
+    "delta_meV": -47.08794108224224
+  },
+  {
+    "point": "Q_reflected",
+    "representative_supercell_g": [
+      0,
+      0
+    ],
+    "primitive_k_A_inverse": [
+      0.29766947990715703,
+      -0.10311573261237085
+    ],
+    "up_band": 309,
+    "down_band": 312,
+    "up_energy_eV": -3.1290135993897783,
+    "down_energy_eV": -3.0641400445018037,
+    "up_total_norm_in_layer_and_sector": 0.9910558980288061,
+    "down_total_norm_in_layer_and_sector": 0.9987869686498619,
+    "delta_meV": -64.87355488797463
+  },
+  {
+    "point": "Q_reflected",
+    "representative_supercell_g": [
+      -1,
+      0
+    ],
+    "primitive_k_A_inverse": [
+      -0.20677226174286797,
+      0.18812384271975302
+    ],
+    "up_band": 312,
+    "down_band": 310,
+    "up_energy_eV": -3.049613285123758,
+    "down_energy_eV": -3.0967063231137995,
+    "up_total_norm_in_layer_and_sector": 0.9990360751681336,
+    "down_total_norm_in_layer_and_sector": 0.958004319704894,
+    "delta_meV": 47.09303799004161
+  }
+]

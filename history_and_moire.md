@@ -20,13 +20,13 @@
 |---|---|
 | Liu、Yu、Liu，PRL **133**, 206702 (2024) | 转角引入交换反向磁层的面内二重旋转，VOBr 为材料例。设计同晶格 AM 双层时可用它核对旋转、磁序和节点对称性。[期刊](https://doi.org/10.1103/PhysRevLett.133.206702) |
 | Guo、Liu、Liu，PRB **110**, L220402 (2024) | 层偏压错开位于不同层的谷能量。日报代码提供无动量转移极限。材料的谷粒子数还取决于填充和积分范围。[期刊](https://doi.org/10.1103/PhysRevB.110.L220402) |
-| Jin 等，PRB **110**, 174410 (2024) | 堆叠 A 型 AM 的对称性设计。可用于选择双层交换操作和层间项约束。[期刊](https://doi.org/10.1103/PhysRevB.110.174410) |
+| Zeng、Zhao，PRB **110**, 174410 (2024) | 堆叠 A 型 AM 的对称性设计。可用于选择双层交换操作和层间项约束。[期刊](https://doi.org/10.1103/PhysRevB.110.174410) |
 | Sheng 等，Sci. China Phys. Mech. Astron. **68**, 297511 (2025) | 滑移／莫尔铁电与交错自旋劈裂的材料设计，为层内莫尔势与交换调制提供来源。[期刊](https://doi.org/10.1007/s11433-025-2698-5) · [全文](https://arxiv.org/abs/2411.17493) |
 | Xu 等，PRX **15**, 041049 (2025) | 90° GeX/SnX 方格莫尔有效 Hubbard 模型。GeSe 表 II 是已接入的非磁基准。[期刊](https://doi.org/10.1103/wcbz-lbr1) |
 | Castro 等，npj Spintronics **4**, 16 (2026) | AFM 蜂窝莫尔连续模型、应变和 Berry 相响应。可用其耦合矩阵和谷规范设计后续基准。[期刊](https://doi.org/10.1038/s44306-026-00135-1) |
 | Chen 等，Nature Physics (2026) | 以正交转角 CrPS₄ 同质结构研究实验信号。与小角度的通用连续模型属于不同几何基准。[期刊](https://doi.org/10.1038/s41567-026-03440-y) |
-| González-Hernández 等，Nano Lett. (2026) | 扭转 Co 掺杂 Fe₃GaTe₂ 的第一性原理 i 波实例。用于比较磁各向异性与磁矩方向。[期刊](https://doi.org/10.1021/acs.nanolett.6c01391) |
-| Järvinen 等，Nano Lett. **26**, 5078 (2026) | 转角 AFM 的交错磁磁振子。相应的基底和本征问题属于玻色自旋波模型。[期刊](https://doi.org/10.1021/acs.nanolett.6c00198) |
+| Ruiz 等，Nano Lett. (2026) | 扭转 Co 掺杂 Fe₃GaTe₂ 的第一性原理 i 波实例。用于比较磁各向异性与磁矩方向。[期刊](https://doi.org/10.1021/acs.nanolett.6c01391) |
+| Cui 等，Nano Lett. **26**, 5078 (2026) | 转角 AFM 的交错磁磁振子。相应的基底和本征问题属于玻色自旋波模型。[期刊](https://doi.org/10.1021/acs.nanolett.6c00198) |
 
 另记录了从非磁组分诱导 AM 的预印本。其磁序形成涉及相互作用，本工具的层内磁序作为输入给定。[预印本](https://arxiv.org/abs/2609.03271)
 
@@ -42,3 +42,7 @@
 | Brekke 等，PRL **133**, 236703 (2024) | 显式非共线晶格及低能近似，适合核对由交换和亚晶格生成的 (p) 波能谱。[期刊](https://doi.org/10.1103/PhysRevLett.133.236703) · [含补充材料的全文](https://arxiv.org/abs/2405.15823) |
 | Chakraborty 等，Nat. Commun. **16**, 7270 (2025) | 最小双 kagome TB 与 CeNiAsO Wannier 模型，区分物理自旋响应与有效能带标签。[期刊](https://doi.org/10.1038/s41467-025-62516-0) |
 | Cheong、Huang，npj Quantum Mater. (2024) | 讨论非共线磁性的对称性和允许响应，分类判据与 Ma 等的守恒算符构造各有侧重。[期刊](https://doi.org/10.1038/s41535-024-00626-6) |
+
+## 2026-11-07 续接
+
+后续 NiCl₂ 多角度、原胞动量扇区展开与磁序控制见 [转角研究说明](docs/twist_history.md)。本轮文献筛选和作者元数据修正依据见 [精选文献](docs/literature/selected_papers.md)。Guo 模型公式采用 arXiv v1（三位作者）；期刊版 PRB 110, L220402 为 Guo、Yichen Liu、Junxi Yu、Cheng-Cheng Liu 四位作者。

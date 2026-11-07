@@ -1,5 +1,7 @@
 # AMMoire
 
+**0.2.0 · 2026-11-07 更新**：整合中间两轮转角研究，新增八组已验证公度三角双层几何、同物理动量与同莫尔区比例的比较、未折叠原胞支与折叠最低支对照；将 Cairo 12 带应变模型加入原生预设（共 25 个）。修复观测算符诊断中过松的厄米性校验。[更新与验证](docs/update_2026-11-07.md) · [转角研究如何纳入](docs/twist_history.md) · [本轮精选文献](docs/literature/selected_papers.md)。
+
 交错磁电子紧束缚模型、转角双层连续模型与 hyperspin 守恒诊断。代码用 Python 和 NumPy，绘图另需 Matplotlib。
 
 AMMoire combines electronic tight-binding models with a plane-wave moiré bilayer solver and hyperspin diagnostics. It also compares collinear VASP eigenvalues with bulk tight-binding models.
@@ -21,6 +23,10 @@ python -m ammoire demo --angle 4 --shells 2 --check-cutoff --plot --out results/
 python -m unittest discover -s tests -v
 python -m ammoire.wannier
 python -m ammoire.vasp_bridge --self-test
+# 新增独立公度 TB、八组转角和折叠对照（从源码仓库运行）
+python -m examples.commensurate_demo --out results/commensurate
+# Cairo: 未应变/对角应变，--plot 可选
+python -m ammoire.cairo_demo --plot --out results/cairo
 ```
 
 已有 NumPy 时，可直接运行列表、测试和不带 `--plot` 的 demo。示例输出 `bands.csv` 和 `summary.json`。输入 `--angle 0 --shells 0` 给出均匀堆叠参考，路径用原晶格布里渊区。非零扭角下 `--shells 0` 保留 (G=0)，用于检查动量转移关闭后的极限。偏压定义为顶层减底层能量。角度单位为度，示例能量和长度使用共同的模型单位。
@@ -29,6 +35,8 @@ python -m ammoire.vasp_bridge --self-test
 
 | 用途 | API 或注册名 |
 |---|---|
+| 显式公度转角 TB | `CommensurateTriangularBilayer(m=2,n=1)`；已验证八组 `(m,n)` 及同面积 AA 对照，28/52/76 维。独立于平面波 `MoireBilayer`。 |
+| Cairo 微观应变模型 | `make_model("cairo", delta=0.1)`，12 带、周期规范、论文能量单位 `\|t\|`。`j` 对应原文 `JS`。 |
 | 单带 AM、节点与角向对照 | `square-dxy`、`square-dx2-y2`、`square-g`、`hex-i`、`hex-g-3d`、`cubic-i` |
 | 轨道分辨的 AM | `lieb-dx2-y2`、`brekke-lieb`、`gondolf-dxy`、九个 Gondolf 层群代表模型、六个 Roig 模型或材料参数组 |
 | HAM | `SquareHAM()` 与 `projected_block(h0,h1,h2,h3,h4,h5)`。前者是方格演示参数，后者保留 Ma 等论文式 (6) 的四带结构。 |

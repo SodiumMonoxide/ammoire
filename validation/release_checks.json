@@ -1,0 +1,88 @@
+{
+  "release": "0.2.0",
+  "date": "2026-11-07",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "install": "wheel built without build isolation; pip --target installed outside source; no legacy paths"
+  },
+  "commands": {
+    "installed_import": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "unit_tests": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "wannier_synthetic": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "vasp_synthetic": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "continuum_demo": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "cairo_demo": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "commensurate_demo": {
+      "passed": true,
+      "exit_code": 0
+    }
+  },
+  "unittest_count": 24,
+  "native_presets": 25,
+  "historical_tables": {
+    "angle_scan.csv": {
+      "rows": 8,
+      "common_numeric_columns": [
+        "angle_deg",
+        "fixed_decoupled_sin6_meV",
+        "fixed_full_sin6_meV",
+        "fixed_ka",
+        "fixed_leading_sin6_meV",
+        "fraction_decoupled_max_meV",
+        "fraction_full_max_meV",
+        "fraction_ka",
+        "fraction_lowest_gap_min_eV"
+      ],
+      "max_difference_meV": 8.881784197001252e-13,
+      "absolute_tolerance": 1e-09
+    },
+    "tb_matched_q.csv": {
+      "rows": 8,
+      "common_numeric_columns": [
+        "added_b1",
+        "added_b2",
+        "angle_deg",
+        "folded_ordered_lowest_full_delta_meV",
+        "folded_ordered_lowest_tperp0_delta_meV",
+        "nearest_kx_a",
+        "nearest_ky_a",
+        "primitive_nearest_representative_delta_meV",
+        "primitive_unfolded_same_q_delta_meV",
+        "qx_a",
+        "qy_a"
+      ],
+      "max_difference_meV": 2.220446049250313e-12,
+      "absolute_tolerance": 1e-09
+    }
+  },
+  "cairo_raw_matrix_comparison_against_daily": {
+    "strains": [
+      0,
+      0.1,
+      -0.13
+    ],
+    "random_k_count": 71,
+    "max_residual": 0.0
+  },
+  "material_computations": "Historical derivative archives inspected/copied; VASP and WAVECAR unfolding not rerun in this update",
+  "remote_ci": "Workflow prepared; GitHub execution pending upload"
+}
