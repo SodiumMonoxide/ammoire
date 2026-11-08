@@ -1,0 +1,63 @@
+{
+  "release": "0.3.0",
+  "verified_date": "2026-11-08",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "source_test_count": 40,
+  "installed_wheel_test_count": 40,
+  "packaging": "Built and installed a wheel into a separate directory without resolving dependencies, then tested outside the source tree.",
+  "demos_and_parser_selftests": [
+    "continuum",
+    "cairo",
+    "commensurate",
+    "vasp_synthetic",
+    "wannier_synthetic"
+  ],
+  "wsl_interface": {
+    "distro": "Ubuntu 24.04 (WSL2)",
+    "vasp": "6.5.0",
+    "wannier90": "3.1.0",
+    "compiled_options": "CPU and GPU std/gam/ncl with -DVASP2WANNIER90",
+    "previously_run_official_mos2_interface_cases": 4,
+    "replay_scope": "Standalone Wannier90 with previously exported CPU MoS2 matrices. Validation measures agreement with the same seed interpolant."
+  },
+  "wannier_real_reference": {
+    "non_soc": {
+      "seed": "wannier90",
+      "comparison": "same_seed_wannier90_interpolation",
+      "interpolation": "wsvec",
+      "num_kpoints": 29,
+      "num_bands": 13,
+      "tolerance_eV": 2e-05,
+      "rmse_eV": 3.065112829109933e-06,
+      "max_abs_eV": 1.0298393286811702e-05,
+      "periodicity_residual_eV": 5.074338674593921e-15,
+      "pass": true
+    },
+    "soc": {
+      "seed": "wannier90",
+      "comparison": "same_seed_wannier90_interpolation",
+      "interpolation": "wsvec",
+      "num_kpoints": 29,
+      "num_bands": 26,
+      "tolerance_eV": 2e-05,
+      "rmse_eV": 4.7662261580287775e-06,
+      "max_abs_eV": 1.4254955082115828e-05,
+      "periodicity_residual_eV": 5.23838236936073e-15,
+      "pass": true
+    }
+  },
+  "local_material_replay": {
+    "probes": 7,
+    "pair_records": 6,
+    "matched_prior_analysis": true,
+    "scope": "Local archived static EIGENVAL probes, processed without new DFT runs."
+  },
+  "compensated_model_replay": {
+    "angles": 8,
+    "controls_per_angle": 7,
+    "rows": 56,
+    "max_absolute_shared_column_difference_in_native_units": 0.0
+  },
+  "remote_ci": "Pending GitHub push"
+}

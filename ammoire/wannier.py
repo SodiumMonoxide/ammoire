@@ -15,21 +15,7 @@ from pathlib import Path
 import numpy as np
 
 
-def _check_wsvec(path):
-    if not path.name.endswith("_hr.dat"):
-        return False
-    sidecar = path.with_name(path.name.removesuffix("_hr.dat") + "_wsvec.dat")
-    if not sidecar.is_file():
-        return False
-    with sidecar.open(encoding="utf-8-sig") as file:
-        header = "".join(file.readline().lower().split())
-    expanded = "write_ndegen_applied=.true." in header
-    if not expanded and "use_ws_distance=.false." not in header:
-        raise ValueError(
-            f"{sidecar.name} indicates possible orbital-dependent Wigner–Seitz shifts. "
-            "Export with write_ndegen_applied=true or use_ws_distance=false."
-        )
-    return expanded
+from ._wannier_io import expand_wsvec, interpolation_settings, read_win, seed_file
 
 
 def _read_hr(path):
@@ -119,6 +105,7 @@ class WannierModel:
     degeneracies: np.ndarray
     weighted_hoppings: np.ndarray
     _cartesian_translations: np.ndarray
+    interpolation: str = "degeneracy"
 
     @property
     def size(self):
@@ -126,15 +113,29 @@ class WannierModel:
 
     @classmethod
     def from_hr(cls, path, lattice, *, dimension, tolerance=1e-6):
-        """Load standard *_hr.dat with H(k) = Σ_R exp(i k·R) H(R) / ndegen(R).
+        """Load *_hr.dat and recognized adjacent *_wsvec.dat, if present.
 
-        Use files produced with use_ws_distance=false or with distance shifts
-        already included by write_ndegen_applied=true. The hr file alone cannot
-        reveal omitted shifts. A standard adjacent *_wsvec.dat header is checked
-        when present. For dimension=2, supply a 2×2 in-plane lattice and all
-        third integer translation components must be zero. Tolerance (eV)
-        applies to individual weighted hopping entries before symmetrization.
+        Without a sidecar this legacy entry point assumes an ordinary or
+        pre-expanded export. Use from_seed for strict checks against .win.
+        For dimension=2, supply a 2×2 in-plane lattice and Rz=0 throughout,
+        including the effective translations after any sidecar shifts.
+        Tolerance (eV) applies per weighted entry before symmetrization.
         """
+        return cls._load_hr(Path(path), lattice, dimension, tolerance, settings=None)
+
+    @classmethod
+    def from_seed(cls, seed, *, tolerance=1e-6):
+        """Load a 3D row-vector cell from seed.win and its Hamiltonian.
+
+        Pass the exact seed prefix, for example ``run/wannier90.1``. The
+        Wannier90 3.1 default requires the sidecar unless the input or header
+        establishes a different export mode. No spin label is inferred.
+        """
+        lattice, settings = read_win(seed_file(seed, ".win"))
+        return cls._load_hr(seed_file(seed, "_hr.dat"), lattice, 3, tolerance, settings)
+
+    @classmethod
+    def _load_hr(cls, path, lattice, dimension, tolerance, settings):
         dimension = index(dimension)
         lattice = np.array(lattice, dtype=float, copy=True)
         if dimension not in (2, 3) or lattice.shape != (dimension, dimension):
@@ -144,21 +145,26 @@ class WannierModel:
         tolerance = float(tolerance)
         if not np.isfinite(tolerance) or tolerance < 0:
             raise ValueError("tolerance must be finite and nonnegative")
-        path = Path(path)
-        expanded = _check_wsvec(path)
+        mode, sidecar = interpolation_settings(path, settings)
         translations, degeneracies, hopping = _read_hr(path)
-        if expanded and np.any(degeneracies != 1):
+        if mode == "expanded" and np.any(degeneracies != 1):
             raise ValueError("expanded Wannier90 exports must have unit degeneracies")
         if dimension == 2 and any(r[2] != 0 for r in translations):
             raise ValueError("dimension=2 requires Rz=0 in every Wannier90 hopping block")
         _hermitian_weights(translations, degeneracies, hopping, tolerance)
+        if sidecar is not None:
+            translations, hopping = expand_wsvec(sidecar, translations, hopping)
+            degeneracies = np.ones(len(translations), dtype=int)
+            if dimension == 2 and any(r[2] != 0 for r in translations):
+                raise ValueError("dimension=2 requires effective Rz=0 after Wigner–Seitz shifts")
+            _hermitian_weights(translations, degeneracies, hopping, tolerance)
         translations = np.array(translations)[:, :dimension]
         reciprocal = 2 * np.pi * np.linalg.inv(lattice).T
         cartesian = translations @ lattice
         for array in (lattice, reciprocal, translations, degeneracies, hopping, cartesian):
             array.setflags(write=False)
         return cls(path.stem.removesuffix("_hr"), dimension, lattice, reciprocal,
-                   translations, degeneracies, hopping, cartesian)
+                   translations, degeneracies, hopping, cartesian, mode)
 
     def hamiltonian(self, k):
         """Evaluate at Cartesian k of shape (..., dimension) in the cell gauge."""
@@ -199,6 +205,7 @@ def _self_test():
         path.write_text("\n".join(lines[:-1] + ["1 -1 0 2 2 2.0 0.0"]), encoding="utf-8")
         with np.testing.assert_raises_regex(ValueError, "residual"):
             WannierModel.from_hr(path, lattice, dimension=2)
+        path.write_text("\n".join(lines) + "\n", encoding="utf-8")
         path.with_name("fixture_wsvec.dat").write_text("use_ws_distance=.true.\n", encoding="utf-8")
         with np.testing.assert_raises_regex(ValueError, "Wigner"):
             WannierModel.from_hr(path, lattice, dimension=2)

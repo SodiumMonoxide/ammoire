@@ -1,6 +1,6 @@
-# GitHub 发布 AMMoire 0.2.0
+# GitHub 发布 AMMoire 0.3.0
 
-本目录是独立发布副本，仓库名沿用 `ammoire`，GitHub Pages 关闭。源代码、测试、文献、小型输入和派生基准在发布范围内。本机路径和接力源目录见仓库外的 `DSH_UPLOAD.md`。
+本目录是独立发布副本，仓库名沿用 `ammoire`，GitHub Pages 关闭。源代码、测试、文献、小型输入和派生基准在发布范围内。本机路径和接力源目录见仓库外的 `DSH_UPLOAD_0.3.0.md`。
 
 ## 上传之前
 
@@ -16,7 +16,7 @@ git status --short
 git diff --cached --stat
 ```
 
-本机已验证 Python 3.12.14、NumPy 2.3.5，并完成独立 wheel 构建与源码外安装；具体证据见 `validation/release_checks.json`。远端 Actions 须在推送后查看。
+本机已验证 Python 3.12.14、NumPy 2.3.5、40 项测试和独立 wheel 安装；具体证据见 `validation/release_checks_0.3.0.json`。远端 Actions 须在推送后查看。
 
 ## 已有远端仓库时
 
@@ -27,7 +27,7 @@ git diff --cached --stat
 源副本已初始化 `main` 并暂存发布文件，尚未提交和配置远端。使用用户已确认的账户、可见性和 Git 身份创建空仓库；如本机身份未设置，配置该仓库的本地身份后提交。
 
 ```sh
-git commit -m "Release AMMoire 0.2.0 with commensurate twist controls"
+git commit -m "Release AMMoire 0.3.0 with Wannier interpolation and twist diagnostics"
 git remote add origin https://github.com/YOUR-ACCOUNT/ammoire.git
 git push -u origin main
 ```
@@ -35,3 +35,5 @@ git push -u origin main
 不要将 `YOUR-ACCOUNT` 原样使用。推送后报告仓库 URL、提交 SHA、分支及 CI 状态。
 
 仓库沿用此前未指定再分发许可的状态，许可证由项目所有者另行选择。材料原始输出、授权赝势、波函数、凭据及 dsh 会话资料不在本发布清单中。`benchmark/twist_history` 属于此前计算的派生归档，本轮不把它们标为新的材料重算。
+
+0.3.0 新增数据回归使用合成谱。本机 MoS₂ 路径与转角材料回放仅发布数值验收摘要，原始文件由各自的研究归档管理。

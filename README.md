@@ -1,6 +1,8 @@
 # AMMoire
 
-**0.2.0 · 2026-11-07 更新**：整合中间两轮转角研究，新增八组已验证公度三角双层几何、同物理动量与同莫尔区比例的比较、未折叠原胞支与折叠最低支对照；将 Cairo 12 带应变模型加入原生预设（共 25 个）。修复观测算符诊断中过松的厄米性校验。[更新与验证](docs/update_2026-11-07.md) · [转角研究如何纳入](docs/twist_history.md) · [本轮精选文献](docs/literature/selected_papers.md)。
+**0.3.0 · 2026-11-08** 支持带默认距离修正的 Wannier90 seed 导入和参考能带校验。转角材料新增补偿反铁磁母层模型及共线谱伙伴检查。新版已用 WSL 的 MoS₂ 无 SOC 与 SOC 导出验证。[更新与验证](docs/update_2026-11-08.md) · [VASP 与 Wannier90 工作流](docs/vasp_wannier.md) · [共线谱伙伴检查](docs/collinear_symmetry.md)
+
+八组公度三角双层、Cairo 12 带应变模型以及转角与原胞支对照见上版记录。[0.2.0 更新](docs/update_2026-11-07.md) · [转角研究](docs/twist_history.md) · [精选文献](docs/literature/selected_papers.md)
 
 交错磁电子紧束缚模型、转角双层连续模型与 hyperspin 守恒诊断。代码用 Python 和 NumPy，绘图另需 Matplotlib。
 
@@ -36,12 +38,14 @@ python -m ammoire.cairo_demo --plot --out results/cairo
 | 用途 | API 或注册名 |
 |---|---|
 | 显式公度转角 TB | `CommensurateTriangularBilayer(m=2,n=1)`；已验证八组 `(m,n)` 及同面积 AA 对照，28/52/76 维。独立于平面波 `MoireBilayer`。 |
+| 补偿反铁磁母层 | `CompensatedTriangularBilayer(m=2, n=1)`。四个磁子层，支持八组公度角与界面跃迁、均匀势、配准势控制。 |
 | Cairo 微观应变模型 | `make_model("cairo", delta=0.1)`，12 带、周期规范、论文能量单位 `\|t\|`。`j` 对应原文 `JS`。 |
 | 单带 AM、节点与角向对照 | `square-dxy`、`square-dx2-y2`、`square-g`、`hex-i`、`hex-g-3d`、`cubic-i` |
 | 轨道分辨的 AM | `lieb-dx2-y2`、`brekke-lieb`、`gondolf-dxy`、九个 Gondolf 层群代表模型、六个 Roig 模型或材料参数组 |
 | HAM | `SquareHAM()` 与 `projected_block(h0,h1,h2,h3,h4,h5)`。前者是方格演示参数，后者保留 Ma 等论文式 (6) 的四带结构。 |
 | 旧日报模型 | `ammoire.legacy.daily_model(name, **parameters)`。支持 `roig-2d`、`farajollahpour`、`orbital-hall-6`、`wen-kee`、`guo-90`、`gese-90`。 |
-| Wannier90 | `ammoire.wannier.WannierModel.from_hr(path, lattice, dimension=2)` |
+| Wannier90 | `WannierModel.from_seed(seed)` 或显式晶格 `WannierModel.from_hr(path, lattice, dimension=...)`，配套 `python -m ammoire.wannier_validate SEED`。 |
+| 转角 DFT 伙伴谱 | `python -m ammoire.collinear_symmetry probe_manifest.json`，读取共线 VASP 探针并区分占据与全谱。 |
 | 转角与叠层 | `MoireBilayer(top, bottom, twist_deg=..., shells=..., harmonics=..., bias=...)` |
 | 能带与算符 | `observables.layer_operator` 提升层内算符，`commutator_norm` 计算残差，`resolve_bands` 在简并子空间中对角化投影后的观测算符。 |
 
@@ -64,7 +68,7 @@ energies = np.linalg.eigvalsh(stack.hamiltonian(vertices))
 
 旧日报适配器是可选入口。若持有旧项目，将 `ALTERMAGNET_CONTINUATION` 指向包含 `tb_extensions` 的续接目录，将 `ALTERMAGNET_TB_ROOT` 指向旧模型库根目录。内置预设、测试、莫尔算例和 VASP/Wannier 解析独立运行。适配器为 Roig-2D／Wen–Kee 应用保持谱一致的周期 Bloch 规范变换。组合层前需统一能标、晶格和轨道规范。原模型单位见 `ammoire/legacy.py`，可用 `energy_scale` 和 `energy_unit` 转换。GeSe-90 与 Guo-90 是整套双层基准。
 
-Wannier90 导入接口接收以 Å 为单位的行晶格矩阵，输出 eV。二维输入要求每条跃迁的第三个平移分量均为零。支持常规 `*_hr.dat` 及简并权重，导出时使用 `use_ws_distance=false`，或使用已把距离修正展开的 `write_ndegen_applied=true`。有旁文件时会检查 `*_wsvec.dat` 的标志。自测使用合成文件覆盖复数跃迁、权重、倒格周期和不合法输入。材料层间跃迁及自旋投影仍需由同一 Wannier 规范提供。[Wannier90 文件说明](https://wannier90.readthedocs.io/en/latest/user_guide/wannier90/files/#seedname_hrdat)
+Wannier90 能量用 eV。`from_seed` 读取 `.win` 三维行晶格，并按 `.win` 与 `_wsvec.dat` 的设置处理距离修正。`from_hr` 允许显式提供 Å 晶格，二维模型要求有效跃迁的第三个平移分量为零。材料层间跃迁及自旋算符需要由同一 Wannier 规范提供。[使用说明与验收](docs/vasp_wannier.md)
 
 ## 莫尔近似和 hyperspin 判据
 
