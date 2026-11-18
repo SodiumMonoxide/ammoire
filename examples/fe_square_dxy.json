@@ -1,0 +1,11 @@
+{
+  "dimension": 2,
+  "generators": [
+    {"matrix": [[0, -1], [1, 0]], "spin_sign": -1},
+    {"matrix": [[1, 0], [0, -1]], "spin_sign": -1}
+  ],
+  "operation": [[1, 0], [0, -1]],
+  "positive": {"model": "square-dxy", "parameters": {"j": 0.2}},
+  "negative": {"model": "square-dxy", "parameters": {"j": -0.2}},
+  "kpoints": [[0, 0], [0.43, 0.71], [1.02, -0.63], [-0.76, 0.29]]
+}
