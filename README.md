@@ -1,18 +1,16 @@
 # AMMoire
 
-**0.3.0 · 2026-11-08** 支持带默认距离修正的 Wannier90 seed 导入和参考能带校验。转角材料新增补偿反铁磁母层模型及共线谱伙伴检查。新版已用 WSL 的 MoS₂ 无 SOC 与 SOC 导出验证。[更新与验证](docs/update_2026-11-08.md) · [VASP 与 Wannier90 工作流](docs/vasp_wannier.md) · [共线谱伙伴检查](docs/collinear_symmetry.md)
+AMMoire 是用于研究交错磁体电子结构的 Python 工具包，提供紧束缚（TB）模型、转角双层求解器、自旋对称性分析以及 VASP 和 Wannier90 数据接口。
 
-八组公度三角双层、Cairo 12 带应变模型以及转角与原胞支对照见上版记录。[0.2.0 更新](docs/update_2026-11-07.md) · [转角研究](docs/twist_history.md) · [精选文献](docs/literature/selected_papers.md)
+**0.4.0 · 自旋与铁电切换**　给定磁构型下的自旋 Laue 群和铁电畴间操作，程序判定自旋谱保持（I 型）、同一动量处自旋通道互换（II 型）或动量空间重新映射（III 型），并可用两个畴的 TB 哈密顿量检验预测。内置文献算例包含双层 MnPS₃ 和体相 BiFeO₃。[理论、输入格式与可运行示例](docs/ferroelectric_response.md)
 
-交错磁电子紧束缚模型、转角双层连续模型与 hyperspin 守恒诊断。代码用 Python 和 NumPy，绘图另需 Matplotlib。
-
-AMMoire combines electronic tight-binding models with a plane-wave moiré bilayer solver and hyperspin diagnostics. It also compares collinear VASP eigenvalues with bulk tight-binding models.
+AMMoire provides tight-binding and moiré bilayer models, spin Laue group classification of ferroelectric switching paths, and spin-resolved spectral tests.
 
 - [电子 TB 文献回顾](literature_core.md)覆盖对称性模型、微观多亚晶格模型、材料 Wannier、SOC／拓扑和配对变体，分列已发表、录用与预印本。
-- [日报、转角模型和 hyperspin 对照](history_and_moire.md)汇总 4 份文章简报和 3 天模型日报，记录已复用的原代码及边界。
+- [转角模型与 hyperspin 文献对照](history_and_moire.md)说明模型来源、参数及适用范围。
 - [默认算例能带](benchmark/bands.png)、[数值结果](benchmark/summary.json)和[逐带原始数据](benchmark/bands.csv)。
 - [MnF₂ 的 WSL VASP 基准](vasp/mnf2/README.md)及共线 `EIGENVAL` 到 TB 劈裂的对照入口。
-- [本地 dsh 接力](HANDOFF.md) · [仓库协作约定](AGENTS.md) · [GitHub 发布步骤](RELEASING.md)
+- [Wannier90 导入与验证](docs/vasp_wannier.md) · [共线谱伙伴检验](docs/collinear_symmetry.md) · [公度转角模型](docs/twist_history.md)
 
 ## 运行
 
@@ -21,6 +19,8 @@ AMMoire combines electronic tight-binding models with a plane-wave moiré bilaye
 ```powershell
 python -m pip install -e ".[plot]"
 python -m ammoire models
+python -m ammoire fe-response
+python -m ammoire fe-response examples/fe_square_dxy.json
 python -m ammoire demo --angle 4 --shells 2 --check-cutoff --plot --out results/quickstart
 python -m unittest discover -s tests -v
 python -m ammoire.wannier
@@ -37,6 +37,7 @@ python -m ammoire.cairo_demo --plot --out results/cairo
 
 | 用途 | API 或注册名 |
 |---|---|
+| 自旋与铁电切换 | `SpinLaueGroup.classify` 判定切换类型，`domain_response` 检验群操作和双畴能谱。[接口与算例](docs/ferroelectric_response.md) |
 | 显式公度转角 TB | `CommensurateTriangularBilayer(m=2,n=1)`；已验证八组 `(m,n)` 及同面积 AA 对照，28/52/76 维。独立于平面波 `MoireBilayer`。 |
 | 补偿反铁磁母层 | `CompensatedTriangularBilayer(m=2, n=1)`。四个磁子层，支持八组公度角与界面跃迁、均匀势、配准势控制。 |
 | Cairo 微观应变模型 | `make_model("cairo", delta=0.1)`，12 带、周期规范、论文能量单位 `\|t\|`。`j` 对应原文 `JS`。 |
