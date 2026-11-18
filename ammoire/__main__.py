@@ -8,6 +8,7 @@ from pathlib import Path
 import numpy as np
 
 from .hyperspin import SquareHAM, SZ, charge_channels
+from . import fe_response
 from .models import MODEL_REGISTRY, make_model
 from .moire import MoireBilayer
 from .observables import commutator_norm, expectation, layer_operator, resolve_bands
@@ -108,6 +109,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
     commands.add_parser("models", help="list native models")
+    fe_parser = fe_response.add_command(commands)
     demo = commands.add_parser("demo", help="compare same- and mixed-charge moiré tunneling")
     demo.add_argument("--angle", type=float, default=4.0, help="twist angle in degrees")
     demo.add_argument("--shells", type=int, default=2)
@@ -122,6 +124,9 @@ def main():
     demo.add_argument("--broadening", type=float, default=0.04,
                       help="Gaussian width in model units for --check-cutoff")
     args = parser.parse_args()
+    if args.command == "fe-response":
+        fe_response.run(args, fe_parser)
+        return
     if args.command == "models":
         print(*MODEL_REGISTRY, "square-ham", sep="\n")
         return

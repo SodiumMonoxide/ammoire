@@ -13,6 +13,7 @@ from typing import Callable, Mapping
 import numpy as np
 
 from .cairo import SOURCE as CAIRO, evaluate as _cairo
+from .sun_bilayer import SOURCE as SUN, evaluate as _sun_bilayer
 
 
 IDENTITY = np.eye(2, dtype=complex)
@@ -368,6 +369,9 @@ def _spec(dimension, geometry, size, form, source, implementation, evaluate, **d
 
 
 _MODELS = {
+    'sun-hex-bilayer': _spec(2, 'hexagonal', 8, 'mirror-exchanging bilayer', SUN,
+                             'Representative stacking and nearest bonds for SI Eq. (10); |t| units',
+                             _sun_bilayer, t=1.0, t_inter=0.5, j=1.0, stacking=0, layer_sign=1),
     'cairo': _spec(2, 'square', 12, 'g to d under diagonal strain', CAIRO,
                    'Eqs. (S5)-(S7), d=0 transformed to periodic cell gauge; |t| units',
                    _cairo, t=1.0, tm=0.2, tn1=0.9, tn2=0.6, j=1.0,
